@@ -1,0 +1,250 @@
+/************************
+Colors
+************************/
+$dark: #171e22;
+$pink: #ee7579;
+$dark-gray: #393939;
+$font-gray: #3e4246;
+$gray: #999999;
+$light-gray: #eeeeee;
+$white: #fff;
+$dark-pink: #a1595b;
+
+
+/************************
+Fonts
+************************/
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Francois+One|Lato|Oswald);
+
+$logo-font: 'Francois One', sans-serif;
+$menu-font: 'Oswald', sans-serif;
+$title-font: 'Lato', sans-serif;
+$reg-font: 'PT Sans', serif;
+
+/* *************************************************
+** icons 
+***************************************************/
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-y9yh1j');
+	src:url('../fonts/icomoon.eot?#iefix-y9yh1j') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-y9yh1j') format('woff'),
+		url('../fonts/icomoon.ttf?-y9yh1j') format('truetype'),
+		url('../fonts/icomoon.svg?-y9yh1j#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	display: inline-block;
+    width: 100%;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+	content: "\f007";
+}
+.icon-briefcase:before {
+	content: "\f0b1";
+}
+.icon-envelope:before {
+	content: "\f0e0";
+}
+.icon-mortar-board:before {
+	content: "\f19d";
+}
+.icon-home:before {
+	content: "\e600";
+}
+
+/* *************************************************
+** forms 
+***************************************************/
+form {width: 300px; margin: 0 auto;}
+input {border: 3px solid #fff; padding:15px; background: none; width: 250px; float: left; border-radius: 5px;margin: 5px 0px; font-family: 'Verdana'; font-size: 1em; color: #fff;}
+button {border: 3px solid #fff; padding:15px; background: none; width: 150px; border-radius: 5px; font-family: 'Verdana'; font-size: 1em; color: #fff; margin-top:5px;}
+
+
+input:focus{
+outline:3px solid #ddd;
+}
+
+
+/* *************************************************
+** Mixins 
+***************************************************/
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
+
+@mixin transition($speed) {
+    -webkit-transition: all $speed ease;
+    -moz-transition: all $speed ease;
+    transition: all $speed ease;
+}
+
+/****************************************************
+** slider button
+****************************************************/
+
+.wrap-slider-btn { 
+	position:relative;
+	 input {
+	  position: absolute;
+	  left: -99999px;
+	}
+
+	 label {
+		  cursor: pointer;
+		  position: relative;
+		  height: 115px;
+		  width: 242px;
+		  border-left: 0 solid $gray;
+		  border-right: 0 solid $gray;
+		  font: bold 24px / 115px sans-serif;
+		  text-align: center;
+		  text-transform: uppercase;
+		  color: $dark-gray;
+		  background: $gray;
+		  -webkit-transition: background 2s, width 0.5s, border-left 0.5s, border-right 0.5s, box-shadow 0;
+		  -webkit-transition-delay: 0s, 0.5s, 0.5s, 0s, 0.5s;
+		  -moz-transition: background 2s, width 0.5s 0.5s, border-left 0.5s 0.5s, border-right 0.5s, box-shadow 0 0.5s;
+		  -o-transition: background 2s, width 0.5s 0.5s, border-left 0.5s 0.5s, border-right 0.5s, box-shadow 0 0.5s;
+		  transition: background 2s, width 0.5s 0.5s, border-left 0.5s 0.5s, border-right 0.5s, box-shadow 0 0.5s;
+		}
+
+		.press-button.in-progress:after{
+			content:attr(data-loading);
+		}
+
+		.press-button.finished:after{
+			content:attr(data-finished);
+		}
+
+		input:checked + label {
+		  width: 218px;
+		  border-left-width: 0;
+		  border-left-color: darken($gray, 40%);
+		  border-right-width: 12px;
+		  border-right-color: darken($gray, 40%);
+		  color: $white;
+		  background: darken($gray, 30%);
+		  -webkit-box-shadow: none;
+		  -moz-box-shadow: none;
+		  box-shadow: none;
+		  -webkit-transition: color 2s, background 2s, width 0.5s, border-left 0.5s, border-right 0.5s, box-shadow 0;
+		  -webkit-transition-delay: 0s, 0s, 0s, 0s, 0.5s, 0.5s;
+		  -moz-transition: color 2s, background 2s, width 0.5s, border-left 0.5s, border-right 0.5s 0.5s, box-shadow 0 0.5s;
+		  -o-transition: color 2s, background 2s, width 0.5s, border-left 0.5s, border-right 0.5s 0.5s, box-shadow 0 0.5s;
+		  transition: color 2s, background 2s, width 0.5s, border-left 0.5s, border-right 0.5s 0.5s, box-shadow 0 0.5s;
+		}
+
+		input:checked + label:before {
+		  background: darken($pink, 20%);;
+		}
+
+		 //rec
+		 label:before {
+		  content: "";
+		  position: absolute;
+		  top: 12px;
+		  right: 12px;
+		  height: 12px;
+		  width: 12px;
+		  -webkit-border-radius: 6px;
+		  -moz-border-radius: 6px;
+		  -ms-border-radius: 6px;
+		  -o-border-radius: 6px;
+		  border-radius: 6px;
+		  background: $pink;
+		  -webkit-transition: background 0.5s;
+		  -moz-transition: background 0.5s;
+		  -o-transition: background 0.5s;
+		  transition: background 0.5s;
+		}
+
+		.press-button .tz-bar{
+			background-color:#e667c0;
+			height:3px;
+			bottom:0;
+			left:0;
+			width:0;
+			position:absolute;
+			z-index:1;
+			border-radius:0 0 2px 2px;
+			-webkit-transition: width 0.5s, height 0.5s;
+			-moz-transition: width 0.5s, height 0.5s;
+			transition: width 0.5s, height 0.5s;
+		}
+}//.wrap-slider-btn
+
+
+
+
+// ********** Background:
+.slider-v2 {
+  position: relative; display: block;
+  width: 5.5em; height: 3em;
+  cursor: pointer;
+  border-radius: 1.5em;
+  transition: 350ms;
+  background: $light-gray;
+ box-shadow:
+    0 0.07em 0.1em -0.1em rgba(#000,.4) inset,
+    0 0.05em 0.08em -0.01em rgba(#fff,.7)
+}
+
+// ********** Switch:
+.slider-v2::after {
+  position: absolute; content:'';
+  width: 2em; height: 2em;
+  top: 0.5em; left: 0.5em;
+  border-radius: 50%;
+  transition: 250ms ease-in-out;
+  background: linear-gradient($pink 10%, darken($pink, 20%));
+  background: $pink;
+  @include box-shadow(
+	    0 0.1em 0.15em -0.05em rgba($white,.1) inset,
+	    0 0.2em 0.2em -0.12em rgba($dark-gray,.5)
+    )
+}
+
+// ********** Channel:
+.slider-v2::before {
+  position: absolute; content:'';
+  width: 4em; height: 1.5em;
+  top: 0.75em; left: 0.75em;
+  border-radius: 0.75em;
+  transition: 250ms ease-in-out;
+  background: $gray;
+  /*box-shadow:
+    0 0.08em 0.15em -0.1em rgba(#000,.5) inset,
+    0 0.05em 0.08em -0.01em rgba(#fff,.7),
+    0 0 0 0 rgba($pink,.7) inset;*/
+}
+
+input:checked + .slider-v2::before {
+  box-shadow:
+    0 0.08em 0.15em -0.1em rgba(#000,.5) inset,
+    0 0.05em 0.08em -0.01em rgba(#fff,.7),
+    3em 0 0 0 rgba($pink,.7) inset;
+}
+
+input:checked + .slider-v2::after {
+	left: 3em;
+}
