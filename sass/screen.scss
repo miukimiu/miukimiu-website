@@ -9,6 +9,7 @@
 @import "compass/css3";
 @import "partials/base";
 @import "partials/responsive";
+@import "partials/forkme";
 
 /* *************************************************
 ** Main 
@@ -463,6 +464,12 @@ $spacing: $size/3;
 }
 
 #welcome-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  text-align: center;
+  margin-left: -40px;
+
   h3 {
     color: $white;
     text-align: center;
