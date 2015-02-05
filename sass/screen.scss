@@ -440,7 +440,7 @@ $spacing: $size/3;
   top: 50%;
   @include transform(translateY(-50%));
 }
-#welcome {
+#home {
   margin: 0 auto;
   display: table;
   position: relative;
@@ -450,18 +450,7 @@ $spacing: $size/3;
     text-transform: uppercase;
   }
 }//#welcome
-#cauda {
-  width: 72px;
-  height: 79px;
-  @include animation(cauda 6s linear infinite);
-  @include transform-origin(80%, 80%);
-  background:red;
-}
-@include keyframes(cauda) {
-  0% { @include rotate(-10deg);}
-  50% { @include rotate(30deg);}
-  100% { @include rotate(-10deg);}
-}
+
 
 #welcome-bottom {
   position: absolute;

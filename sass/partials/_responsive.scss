@@ -3,7 +3,7 @@
 .section-title h1 {
     font-size: 50px;
 }
-#welcome {
+#home {
   h1, h2 { 
     text-align: center;
   }
@@ -18,18 +18,7 @@
     line-height: 54px;
     margin-bottom: 20px;
   }
-  #cat {
-        width: 290px;
-        height: 334px;
-        float: none;
-        position: relative;
-        margin: 0 auto;
-    }
-    .fallback { 
-      display: none;
-      /* Make sure it's the same size as the SVG takes up */
-    }
-}//#welcome
+}//#home
 .no-svg .fallback { 
       background-image: url(../images/miukimiu-cat.png); 
     }
@@ -51,7 +40,7 @@
 } 
 /* Mobile */
 @media (max-width: 560px) {
-    #welcome {
+    #home {
         #cat {
             width: 170px;
         }
@@ -83,7 +72,7 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    #welcome {
+    #home {
         h1, h2 { 
             text-align: left;
         }
@@ -97,7 +86,7 @@
             font-size: 62px;
             line-height: 80px;
         }
-    }//#welcome  
+    }//#home  
     .process-flow {
         max-width:750px;
         padding: 0px;
@@ -147,7 +136,7 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    #welcome {
+    #home {
         #cat {
             float: left;
             position: relative;
@@ -157,7 +146,7 @@
             position: relative;
             margin-top: 70px;
         }
-    }//#welcome
+    }//#home
     #about {
         img {
             max-width: 100%;
