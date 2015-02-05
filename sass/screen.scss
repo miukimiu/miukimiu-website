@@ -433,7 +433,7 @@ $spacing: $size/3;
     height: 100%;
   }
 }
-.welcome-container {
+.welcome-text {
   margin: 0 auto;
   display: table;
   position: relative;
@@ -441,8 +441,6 @@ $spacing: $size/3;
   @include transform(translateY(-50%));
 }
 #home {
-  margin: 0 auto;
-  display: table;
   position: relative;
   h1, h2 { 
     color: $white;
