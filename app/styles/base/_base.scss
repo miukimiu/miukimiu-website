@@ -1,0 +1,29 @@
+html { 
+    position: relative;
+    min-height: 100%;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 37px;
+    background: $color-white;
+    font-family: $ops-font-stack;
+    font-weight: $ops-font-normal;
+}
+
+a {
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

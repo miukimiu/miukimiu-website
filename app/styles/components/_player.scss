@@ -1,0 +1,65 @@
+/* 
+* Player
+*/
+
+// variables
+$size: 75px;
+
+.player {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+}
+.player-controls {
+    background: $color-active;
+    text-align: center;
+    display: block;
+
+    li {
+        display: inline-block;
+    }
+    i:before {
+        font-size: 45px;
+        line-height: 1;
+        margin: 0;
+    }
+    .is-btn {
+        color: $color-white;
+    }
+    .is-playPause {
+        color: $color-white;
+
+        &:before {
+            font-size: 45px;
+            line-height: $size;
+        }
+    }
+    .has-circle {
+        width: 75px;
+        height: 30px;
+        position: relative;
+    }
+    .is-circle {
+        
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $size;
+        height: $size;
+        margin-left: -$size/2;
+        margin-top: -$size/2;
+        background: $color-active;
+    }
+}
+.player-info {
+    background: rgba($color-black, 0.1);
+    text-align: center;
+    color: $color-white;
+    padding: ($ops-spacing-sm + $ops-spacing-xxs) 0 $ops-spacing-xs;
+
+    p {
+        margin: 0;
+        color: $color-white;
+    }
+}

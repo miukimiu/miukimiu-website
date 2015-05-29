@@ -1,12 +1,37 @@
-miukimiu-portfolio
-==================
+# onepagesoundcloud
 
-Just my portfolio with svg, sass, html and some jquery
+As a **Soundcloud** lover, I allways wanted to create a single page with custom players. 
+There are now many great resources in order do achieve that. After some research I found Pangular, an AngularJS Plugin that allows to create custom *Soundcloud* players in an easy way.
+With some html and CSS/SASS the result was an one page site.
 
-All that I know I learned on the web, with other front-end developers. Searching on google, youtube tutorials and so on. I love people who share codes!
+You can see it in action, here:
+http://miukimiu.github.io/onepagesoundcloud/
 
-So, I decided to put my website on github to be openly accessible. You can comment, expanded and/or fork!
+## Getting Started
+* This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+version 0.11.1.
+* Install pangular with `bower install pangular`
 
-If you use my code please try to give your personal look. :D
+## Build & development
 
-Thank you for read this!
+Run `grunt` for building and `grunt serve` for preview.
+
+## Testing
+
+Running `grunt test` will run the unit tests with karma.
+
+##Resources used on this projects
+
+* AngularJS: https://angularjs.org/
+* Pangular: https://github.com/jxnblk/plangular
+* Flat Icon Ios7 Set Lined: http://www.flaticon.com/packs/ios7-set-lined-1
+* Sass: http://sass-lang.com/
+* Compass: http://compass-style.org/
+
+##Making Changes
+* Checkout a new branch `git checkout -b my_awesome_branch`
+* Make your changes
+* Once you have made your changes, simply commit them and push them up to the new remote branch at Github.
+
+##Need Help?
+Give me a shout (mail@miukimiu.com)

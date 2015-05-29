@@ -1,0 +1,54 @@
+// footer styles
+.footer {
+    // variables
+    $footer-height: 50px;
+    // styles
+    color: $color-gray;
+    font-size: 12px;
+    text-align: center;
+    background: $color-bg;
+    padding: $ops-spacing-xs;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 37px; // Sticky footer
+
+    // layout structure
+    .footer-inner {
+        @include make-row();
+    }
+    .footer-copyright {
+        //@include make-sm-column(12);
+        @include make-xs-column(6);
+        margin: 0;
+    }
+    .footer-menu {
+        @include make-xs-column(6);
+        //@include make-md-column(6);
+    }
+    // link styles
+    a {
+        color: $color-active;
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+            color: $ops-gray;
+        }
+    }
+    p {
+        margin-bottom: 0;
+    }
+    .footer-menu {
+        text-align: right;
+        display: block;
+        li {
+            display: inline-block;
+        }
+    }
+    .footer-menu,
+    .footer-copyright {
+        // tablets landscape above
+        @media (min-width: $screen-md-min) {}
+        // tablets portrait below
+        @media (max-width: $screen-sm-max) {}
+    }
+}

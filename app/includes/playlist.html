@@ -1,0 +1,14 @@
+<ul class="playlist">
+    <li ng-repeat="track in tracks">
+      <div class="home-playlist-item" ng-class="{'is-active': player.playing === track.src }" ng-click="playPause($index)">
+        
+        <span>
+          {{track.user.username}} - {{track.title}}
+        </span>
+        
+        <span>
+          {{ track.duration / 1000 | hhmmss }}
+        </span>
+      </div>
+    </li>
+</ul>

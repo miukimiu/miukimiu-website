@@ -1,0 +1,55 @@
+// Mixins
+
+// vertical align
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+// remove margin and paddings
+@mixin no-margin-padding {
+    margin: 0;
+    padding: 0;
+}
+
+// Mixin for use icons from iconmoon https://icomoon.io/#preview-free
+@mixin ops-icon($icon, $position: "before", $replace: false) {
+    // If we're replacing the text, set font-size to 0
+    @if $replace {
+        font-size: 0;
+    }
+    // Pseudo-element properties
+    &:#{$position} {
+        @extend .flaticon-#{$icon};
+        font-family: 'Flaticon';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        @if $replace {
+          font-size: 1rem;
+        }
+        @content;
+    }
+}
+
+// media queries
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
