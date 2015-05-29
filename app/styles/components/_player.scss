@@ -6,20 +6,22 @@
 $size: 75px;
 
 .player {
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 100px;
+    display: block;
+    height: 20px;
 }
-.player-controls {
-    background: $color-active;
+.player__controls {
     text-align: center;
     display: block;
+    width: 100%;
+    position: absolute;
 
     li {
         display: inline-block;
     }
     i:before {
-        font-size: 45px;
+        font-size: 35px;
         line-height: 1;
         margin: 0;
     }
@@ -49,7 +51,7 @@ $size: 75px;
         height: $size;
         margin-left: -$size/2;
         margin-top: -$size/2;
-        background: $color-active;
+        background: $color-brand;
     }
 }
 .player-info {

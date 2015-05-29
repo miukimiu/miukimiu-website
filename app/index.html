@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -21,23 +22,35 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-
     <main plangular="http://soundcloud.com/jxnblk/sets/yello">
-    <!-- header -->
-    <header class="header">
-
-        <div class="header-nav"> 
+        <!-- header -->
+        <header class="header">
             <div class="container">
-                <nav class="header-inner" role="navigation">
-                    <div class="header-logo">
+                <nav class="row" role="navigation">
+
+                    <div class="header__logo">
                         <h1><a href="index.html">Miuki Miu</a></h1>
                     </div>
 
-                     <!-- Player -->
-                    <ng-include src="'includes/player.html'"></ng-include>
-                    <!-- / Player -->
+                    <div class="header__menu--mobile">
+                        <ul>
+                            <li>
+                                <a href="#main">About</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#music">Music</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <div class="header-menu">
+                    <div class="header__player">
+                        <ng-include src="'includes/player.html'"></ng-include>
+                    </div>
+
+                    <div class="header__menu">
                         <ul>
                             <li>
                                 <a href="#main">About</a>
@@ -52,14 +65,16 @@
                     </div>
                 </nav>
             </div>
-        </div>   
-    </header>
-    <!-- / header -->
-        
+            <!-- /.container -->
+
+            <div class="player-info">
+                <p>Playing: {{playlist.user.username}} - {{track.title}}</p>
+            </div>
+        </header>
+        <!-- / header -->
         <div ng-view=""></div>
     </main>
     <!-- /main  -->
-
     <!-- footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
@@ -69,7 +84,6 @@
         </div>
     </footer>
     <!-- /footer -->
-        
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
     ! function(A, n, g, u, l, a, r) {
