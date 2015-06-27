@@ -9,11 +9,9 @@ body {
 }
 
 body {
-    /* Margin bottom by footer height */
-    margin-bottom: 37px;
     background: $color-white;
-    font-family: $ops-font-stack;
-    font-weight: $ops-font-normal;
+    font-family: $font-family;
+    font-weight: $font-regular;
 }
 
 a {

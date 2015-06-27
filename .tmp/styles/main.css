@@ -2061,19 +2061,17 @@ body {
 
 /* line 11, ../../app/styles/base/_base.scss */
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 37px;
   background: #fff;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
 
-/* line 20, ../../app/styles/base/_base.scss */
+/* line 18, ../../app/styles/base/_base.scss */
 a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
-/* line 25, ../../app/styles/base/_base.scss */
+/* line 23, ../../app/styles/base/_base.scss */
 ul {
   margin: 0;
   padding: 0;
@@ -4324,23 +4322,13 @@ hr {
 }
 /* line 26, ../../app/styles/layout/_header.scss */
 .header .row .header__menu {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  @incslude make-sm-column(4);
   position: relative;
   float: left;
   width: 33.3333333333%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media (min-width: 768px) {
-  /* line 26, ../../app/styles/layout/_header.scss */
-  .header .row .header__menu {
-    float: left;
-    width: 33.3333333333%;
-  }
 }
 @media (max-width: 768px) {
   /* line 26, ../../app/styles/layout/_header.scss */
@@ -4955,67 +4943,12 @@ hr {
   color: #a5a6aa;
   font-size: 12px;
   text-align: center;
-  background: #F7F4F4;
+  background: #ee7579;
   padding: 10px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  height: 37px;
-}
-/* line 17, ../../app/styles/layout/_footer.scss */
-.footer .footer-inner {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-/* line 14, ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-.footer .footer-inner:before, .footer .footer-inner:after {
-  content: " ";
-  display: table;
-}
-/* line 19, ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-.footer .footer-inner:after {
-  clear: both;
-}
-/* line 20, ../../app/styles/layout/_footer.scss */
-.footer .footer-copyright {
-  position: relative;
-  float: left;
-  width: 50%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0;
-}
-/* line 25, ../../app/styles/layout/_footer.scss */
-.footer .footer-menu {
-  position: relative;
-  float: left;
-  width: 50%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-/* line 30, ../../app/styles/layout/_footer.scss */
-.footer a {
-  color: #a1595b;
-}
-/* line 32, ../../app/styles/layout/_footer.scss */
-.footer a:hover, .footer a:focus, .footer a:active {
-  text-decoration: none;
-  color: #a5a6aa;
-}
-/* line 37, ../../app/styles/layout/_footer.scss */
-.footer p {
-  margin-bottom: 0;
-}
-/* line 40, ../../app/styles/layout/_footer.scss */
-.footer .footer-menu {
-  text-align: right;
-  display: block;
-}
-/* line 43, ../../app/styles/layout/_footer.scss */
-.footer .footer-menu li {
-  display: inline-block;
+  height: 40px;
 }
 
 /* 
@@ -5023,49 +4956,48 @@ hr {
 */
 /* line 8, ../../app/styles/components/_player.scss */
 .player {
-  position: relative;
+  position: absolute;
   width: 100%;
   display: block;
-  height: 20px;
 }
 
-/* line 14, ../../app/styles/components/_player.scss */
+/* line 13, ../../app/styles/components/_player.scss */
 .player__controls {
   text-align: center;
   display: block;
   width: 100%;
   position: absolute;
 }
-/* line 20, ../../app/styles/components/_player.scss */
+/* line 19, ../../app/styles/components/_player.scss */
 .player__controls li {
   display: inline-block;
 }
-/* line 23, ../../app/styles/components/_player.scss */
+/* line 22, ../../app/styles/components/_player.scss */
 .player__controls i:before {
   font-size: 35px;
   line-height: 1;
   margin: 0;
 }
-/* line 28, ../../app/styles/components/_player.scss */
+/* line 27, ../../app/styles/components/_player.scss */
 .player__controls .is-btn {
   color: #fff;
 }
-/* line 31, ../../app/styles/components/_player.scss */
+/* line 30, ../../app/styles/components/_player.scss */
 .player__controls .is-playPause {
   color: #fff;
 }
-/* line 34, ../../app/styles/components/_player.scss */
+/* line 33, ../../app/styles/components/_player.scss */
 .player__controls .is-playPause:before {
   font-size: 45px;
   line-height: 75px;
 }
-/* line 39, ../../app/styles/components/_player.scss */
+/* line 38, ../../app/styles/components/_player.scss */
 .player__controls .has-circle {
   width: 75px;
   height: 30px;
   position: relative;
 }
-/* line 44, ../../app/styles/components/_player.scss */
+/* line 43, ../../app/styles/components/_player.scss */
 .player__controls .is-circle {
   border-radius: 50%;
   position: absolute;
@@ -5078,17 +5010,15 @@ hr {
   background: #ee7579;
 }
 
-/* line 57, ../../app/styles/components/_player.scss */
+/* line 56, ../../app/styles/components/_player.scss */
 .player-info {
   background: rgba(6, 5, 13, 0.1);
   text-align: center;
   color: #fff;
   padding: 25px 0 10px;
 }
-/* line 63, ../../app/styles/components/_player.scss */
+/* line 62, ../../app/styles/components/_player.scss */
 .player-info p {
   margin: 0;
   color: #fff;
 }
-
-/*# sourceMappingURL=main.css.map */

@@ -69,15 +69,15 @@
         </header>
         <!-- / header -->
         <div ng-view=""></div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <ng-include src="'includes/player.html'"></ng-include>
+        </footer>
+        <!-- /footer -->
     </main>
     <!-- /main  -->
-    <!-- footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="header__player">
-                <ng-include src="'includes/player.html'"></ng-include>
-            </div>
-    </footer>
-    <!-- /footer -->
+    
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
     ! function(A, n, g, u, l, a, r) {

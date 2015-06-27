@@ -26,18 +26,15 @@ $reg-font: 'PT Sans', serif;
 /************************
 Fonts
 ************************/
-$ops-spacing: 40px;                          // base spacing
-$ops-spacing-xlg: round($ops-spacing * 3);    // 80px
-$ops-spacing-lg: round($ops-spacing * 2);    // 40px
-$ops-spacing-sm: round($ops-spacing / 2);    // 20px
-$ops-spacing-xs: round($ops-spacing / 4);    // 10px
-$ops-spacing-xxs: round($ops-spacing / 8);   // 5px
+$gutter: 40px;                          // base spacing
+$gutter-xlg: round($gutter * 3);    // 80px
+$gutter-lg: round($gutter * 2);    // 40px
+$gutter-sm: round($gutter / 2);    // 20px
+$gutter-xs: round($gutter / 4);    // 10px
+$gutter-xxs: round($gutter / 8);   // 5px
 
 // typography
-$ops-font-stack: 'Open Sans', sans-serif;
-$ops-font-light: 300;
-$ops-font-normal: 400;
-$ops-font-bold:   600;
+$font-family: 'Open Sans', sans-serif;
 
 $font-regular: 400;
 $font-bold:   600;
