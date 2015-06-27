@@ -6898,6 +6898,395 @@ hr {
     width: 24.4%;
   }
 }
+/* line 12, ../../app/styles/layout/_cassette.scss */
+.screw {
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: #06050d;
+  border-radius: 50%;
+}
+
+/* line 20, ../../app/styles/layout/_cassette.scss */
+.screw-inner {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+/* line 31, ../../app/styles/layout/_cassette.scss */
+.screw-inner:before, .screw-inner:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  background: #33BD76;
+  width: 5px;
+  border-radius: 2px;
+}
+/* line 39, ../../app/styles/layout/_cassette.scss */
+.screw-inner:before {
+  left: 50%;
+  width: 40%;
+  margin-left: -20%;
+  height: 100%;
+}
+/* line 45, ../../app/styles/layout/_cassette.scss */
+.screw-inner:after {
+  top: 50%;
+  height: 40%;
+  margin-top: -20%;
+  width: 100%;
+}
+
+/* line 54, ../../app/styles/layout/_cassette.scss */
+.screws .screw:nth-child(1) {
+  top: 5px;
+  left: 10px;
+}
+/* line 59, ../../app/styles/layout/_cassette.scss */
+.screws .screw:nth-child(2) {
+  top: 5px;
+  right: 10px;
+}
+/* line 63, ../../app/styles/layout/_cassette.scss */
+.screws .screw:nth-child(3) {
+  left: 10px;
+  bottom: 5px;
+}
+/* line 68, ../../app/styles/layout/_cassette.scss */
+.screws .screw:nth-child(4) {
+  right: 10px;
+  bottom: 5px;
+}
+
+/* line 75, ../../app/styles/layout/_cassette.scss */
+.cassette {
+  position: relative;
+  margin: 0 auto;
+  background: #2F3B46;
+  border-radius: 16px;
+  width: 534px;
+  height: 335px;
+}
+/* line 82, ../../app/styles/layout/_cassette.scss */
+.cassette:before {
+  position: absolute;
+  z-index: 20;
+  bottom: 20px;
+  left: -3px;
+  content: "";
+  height: 90px;
+  border-right: #2F3B46 solid 5px;
+  border-top: transparent solid 10px;
+  border-bottom: transparent solid 10px;
+}
+/* line 93, ../../app/styles/layout/_cassette.scss */
+.cassette:after {
+  position: absolute;
+  z-index: 20;
+  bottom: 20px;
+  right: -3px;
+  content: "";
+  height: 90px;
+  border-left: #2F3B46 solid 5px;
+  border-top: transparent solid 10px;
+  border-bottom: transparent solid 10px;
+}
+
+/* line 105, ../../app/styles/layout/_cassette.scss */
+.outer-sticker {
+  background: #171D22;
+  width: 474px;
+  height: 210px;
+  position: relative;
+  left: 50%;
+  margin-left: -237px;
+  border-radius: 16px;
+  position: relative;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+/* line 118, ../../app/styles/layout/_cassette.scss */
+.sticker {
+  background: #D8D8D8;
+  margin: 0 auto;
+  width: 466px;
+  height: 200px;
+  border-radius: 16px;
+  position: relative;
+  margin-top: 5px;
+}
+
+/* line 127, ../../app/styles/layout/_cassette.scss */
+.sticker-header {
+  float: left;
+  background: #fff;
+  margin: 10px;
+  width: 446px;
+  border-radius: 4px;
+}
+/* line 134, ../../app/styles/layout/_cassette.scss */
+.sticker-header .side {
+  font-weight: 700;
+  font-size: 30px;
+  color: #f2e600;
+  padding: 0 5px 1px;
+  line-height: 32px;
+  margin-top: 10px;
+  background: gray;
+  float: left;
+  border-radius: 5px;
+}
+
+/* line 146, ../../app/styles/layout/_cassette.scss */
+.sticker-center {
+  position: relative;
+  display: inline-block;
+  background: #E83B4D;
+  width: 100%;
+  height: 90px;
+}
+/* line 153, ../../app/styles/layout/_cassette.scss */
+.sticker-center .stripe-a {
+  background: #f03337;
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+}
+/* line 159, ../../app/styles/layout/_cassette.scss */
+.sticker-center .stripe-b {
+  background: #2a1e2a;
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  margin-top: 30px;
+}
+/* line 166, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center {
+  background: #171D22;
+  margin: 0 auto;
+  width: 318px;
+  height: 92px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -159px;
+}
+/* line 177, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  background: #fff;
+  position: absolute;
+  top: 12px;
+}
+/* line 185, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle:nth-child(1) {
+  left: 15px;
+}
+/* line 186, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle:nth-child(2) {
+  right: 15px;
+}
+/* line 188, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle i {
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 55%;
+  left: 45%;
+  top: -5%;
+  border-top: solid 15px #171D22;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  z-index: 999;
+}
+/* line 198, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle i:nth-child(1) {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+/* line 199, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle i:nth-child(2) {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 200, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle i:nth-child(3) {
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+/* line 201, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle i:nth-child(4) {
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+/* line 202, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle i:nth-child(5) {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+/* line 203, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .circle i:nth-child(6) {
+  -webkit-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+/* line 207, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .window {
+  position: absolute;
+  overflow: hidden;
+  background: #fff;
+  width: 122px;
+  height: 60px;
+  left: 50%;
+  margin-left: -61px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+/* line 218, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .window .reel {
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  background: #DA9746;
+  position: absolute;
+  top: -60px;
+}
+/* line 226, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .window .reel:nth-child(1) {
+  left: -150px;
+}
+/* line 229, ../../app/styles/layout/_cassette.scss */
+.sticker-center .cassete-center .window .reel:nth-child(2) {
+  right: -150px;
+}
+
+/* line 236, ../../app/styles/layout/_cassette.scss */
+.sticker-bottom {
+  margin: 5px 5px;
+  overflow: auto;
+  margin: 10px;
+  width: 446px;
+  background: #fff;
+}
+/* line 242, ../../app/styles/layout/_cassette.scss */
+.sticker-bottom hr {
+  border: 0;
+  height: 3px;
+  background: #2F3B46;
+  width: 170px;
+}
+/* line 247, ../../app/styles/layout/_cassette.scss */
+.sticker-bottom hr:nth-child(1) {
+  float: left;
+}
+/* line 250, ../../app/styles/layout/_cassette.scss */
+.sticker-bottom hr:nth-child(3) {
+  float: right;
+}
+/* line 254, ../../app/styles/layout/_cassette.scss */
+.sticker-bottom p {
+  font-size: 12px;
+  float: left;
+  line-height: 19px;
+  padding-left: 19px;
+}
+
+/* line 261, ../../app/styles/layout/_cassette.scss */
+.cassette-bottom-outer {
+  position: absolute;
+  left: 50%;
+  margin-left: -175px;
+  bottom: 0;
+  border-bottom: 80px solid #06050d;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 350px;
+}
+
+/* line 272, ../../app/styles/layout/_cassette.scss */
+.cassette-bottom {
+  border-bottom: 80px solid #171D22;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: relative;
+  margin-left: -15px;
+  margin-top: 5px;
+  height: 0;
+  width: 340px;
+}
+/* line 281, ../../app/styles/layout/_cassette.scss */
+.cassette-bottom .screw {
+  bottom: 0px;
+  left: 50%;
+  margin-left: -10px;
+  top: 20px;
+}
+
+/* line 289, ../../app/styles/layout/_cassette.scss */
+.holes div {
+  position: absolute;
+  bottom: -70px;
+}
+/* line 293, ../../app/styles/layout/_cassette.scss */
+.holes .hole-big {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+}
+/* line 299, ../../app/styles/layout/_cassette.scss */
+.holes .hole-small {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+/* line 305, ../../app/styles/layout/_cassette.scss */
+.holes :nth-child(1) {
+  left: 20px;
+  box-shadow: #06050d -2px 2px 0px;
+}
+/* line 309, ../../app/styles/layout/_cassette.scss */
+.holes :nth-child(2) {
+  left: 70px;
+  bottom: -60px;
+  box-shadow: #06050d -2px 2px 0px;
+}
+/* line 314, ../../app/styles/layout/_cassette.scss */
+.holes :nth-child(3) {
+  right: 20px;
+  box-shadow: #06050d 2px 2px 0px;
+}
+/* line 318, ../../app/styles/layout/_cassette.scss */
+.holes :nth-child(4) {
+  right: 70px;
+  bottom: -60px;
+  box-shadow: #06050d 2px 2px 0px;
+}
+
+/* line 326, ../../app/styles/layout/_cassette.scss */
+.notes {
+  float: left;
+  margin-left: 15px;
+  width: 100%;
+}
+/* line 330, ../../app/styles/layout/_cassette.scss */
+.notes p {
+  padding: 5px;
+  margin: 0;
+}
+
 /* *************************************************
 ** About 
 ***************************************************/
@@ -6909,7 +7298,7 @@ hr {
 #about h2 {
   font-size: 25px;
   margin-bottom: 10px;
-  color: #999999;
+  color: #2F3B46;
 }
 /* line 11, ../../app/styles/layout/_about.scss */
 #about h3 {
@@ -6918,7 +7307,7 @@ hr {
 
 /* line 15, ../../app/styles/layout/_about.scss */
 .social-icon a {
-  color: #999999;
+  color: #2F3B46;
   padding: 5px;
   display: inline-block;
 }
@@ -6982,7 +7371,7 @@ hr {
 
 /* line 59, ../../app/styles/layout/_about.scss */
 .skillBar li span {
-  background-color: #999999;
+  background-color: #2F3B46;
 }
 
 /* *************************************************
@@ -7035,11 +7424,11 @@ hr {
 }
 /* line 88, ../../app/styles/layout/_about.scss */
 #experience h4 {
-  color: #ee7579;
+  color: #E83B4D;
 }
 /* line 91, ../../app/styles/layout/_about.scss */
 #experience h5 {
-  color: #999999;
+  color: #2F3B46;
   font-size: 14px;
   font-weight: 700;
 }
@@ -7058,7 +7447,7 @@ hr {
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #999999;
+  background-color: #2F3B46;
   left: 50%;
   margin-left: -1.5px;
 }
@@ -7128,7 +7517,7 @@ hr {
   top: 16px;
   left: 50%;
   margin-left: -25px;
-  background-color: #999999;
+  background-color: #2F3B46;
   z-index: 100;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -7174,7 +7563,7 @@ hr {
 
 /* line 212, ../../app/styles/layout/_about.scss */
 .timeline-badge.danger {
-  background-color: #ee7579 !important;
+  background-color: #E83B4D !important;
 }
 
 /* line 216, ../../app/styles/layout/_about.scss */
