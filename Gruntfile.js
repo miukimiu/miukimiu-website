@@ -176,12 +176,6 @@ module.exports = function (grunt) {
       }
     },
 
-    buildGhPages: {
-      ghPages: {
-        // Leave empty if you just want to run the defaults
-      },
-    },
-
     // Automatically inject Bower components into the app
     wiredep: {
       app: {
@@ -468,8 +462,7 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin',
-    'build_gh_pages:gh_pages',
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
