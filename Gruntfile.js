@@ -180,13 +180,6 @@ module.exports = function (grunt) {
       ghPages: {
         // Leave empty if you just want to run the defaults
       },
-      production: {
-        options: {
-          build_branch: "gh-pages",
-          dist: "dist",
-          pull: true
-        }
-      }
     },
 
     // Automatically inject Bower components into the app
@@ -475,7 +468,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'build_gh_pages:gh_pages',
   ]);
 
   grunt.registerTask('default', [

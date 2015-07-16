@@ -5,21 +5,21 @@
 
             <ul>
                 <li>
-                    <a ng-click="previous()"><i class="flaticon-rewind45 is-btn"></i></a>
+                    <a ng-click="previous()"><i class="ion-ios-skipbackward is-btn"></i></a>
                 </li>
                 <li ng-click="playPause(index)" class="has-circle">
                     <div class="is-circle">
 
                         <a ng-if="player.playing !== track.src">
-                            <i class="ion-play is-playPause"></i>
+                            <i class="ion-ios-play is-playPause"></i>
                         </a>
                         <a ng-if="player.playing === track.src">
-                            <i class="flaticon-pause44 is-playPause"></i>
+                            <i class="ion-ios-pause is-playPause"></i>
                         </a>
                     </div>
                 </li>
                 <li>
-                    <a ng-click="next()"><i class="flaticon-fast46 is-btn"></i></a>
+                    <a ng-click="next()"><i class="ion-ios-skipforward is-btn"></i></a>
                 </li>
             </ul>
         </div>
