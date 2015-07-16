@@ -418,6 +418,18 @@ module.exports = function (grunt) {
     }
   });
 
+  buildGhPages: {
+    ghPages: {
+      // Leave empty if you just want to run the defaults
+    },
+    production: {
+      options: {
+        build_branch: "gh-pages",
+        dist: "dist",
+        pull: true
+      }
+    }
+  },
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
