@@ -1,25 +1,23 @@
-@import "compass";
+// bower:scss
+@import "bower_components/typi/scss/_typi.scss";
+// endbower
 
-// vendor
-@import "vendor/bootstrap-custom/";
-@import "vendor/ionicons";
-
-// helper files
 @import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/animations";
 
-// base
+@import "base/reset";
 @import "base/base";
 @import "base/typography";
-@import "base/buttons";
+@import "base/icons";
 
-// layout
-@import "layout/header";
-@import "layout/main";
-@import "layout/cassette";
-@import "layout/about";
-@import "layout/footer";
+@import "components/buttons";
+@import "components/about";
+@import "components/callout";
+@import "components/experience";
+@import "components/footer";
+@import "components/forkme";
+@import "components/home";
+@import "components/menu";
+@import "components/timeline";
+@import "components/main";
 
-// components
-@import "components/player";
+@import "bower_components/typi/scss/typi";

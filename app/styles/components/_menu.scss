@@ -1,0 +1,206 @@
+
+/* *************************************************
+** Menu
+***************************************************/
+#menu-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+
+  &.active-width {
+    width: 100%;
+    height: 100%;
+    //background: rgba($gray, 0.4);
+    display: block;
+  }
+
+  a {
+    margin: 0;
+    font-family: $menu-font;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+  .menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 20;
+    padding: 5px 0px;
+    transform-origin: center center;
+    transition-property: color, border-color, margin-left, width, transform;
+    transition-duration: .1s;
+    transition-timing-function: ease-out;
+    transition-delay: (0s, 0s, .2s, .2s, 0s);
+
+    .label-menu {
+      font-family: $menu-font;
+      padding: 2px 5px;
+      font-size: 20px;
+      transition-property: opacity;
+      transition-duration: .1s;
+      transition-timing-function: ease-out-quad;
+      transition-delay: .4s;
+    }
+
+    .close {
+      display: block;
+      position: absolute;
+      top: -2px;
+      left: -100px;
+      font-size: 50px;
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-duratiom: .1s;
+      transition-timing-function: ease-out-quad;
+      transition-delay: 0s, 0s;
+    }
+
+    &.open {
+      border-color: $white;
+      color: $white;
+      width: 60px;
+      height: 60px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      margin-left: -30px;
+      border: 6px solid rgba($white, .5);
+      transform: rotate(45deg);
+      transition-delay: (0s, 0s, 0s, 0s, .2s);
+
+      .label-menu {
+        opacity: 0;
+        transition-delay: 0;
+      }
+
+      .close {
+        opacity: 1;
+        transform: rotate(-45deg);
+        transition-delay: .2s, 0s;
+        color: $white;
+        left: 3px;
+      }
+
+      &:hover {
+        border-color: #ffffff;
+        color: #ffffff;
+        background: none;
+      }
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($dark-gray, .7);
+    background: rgba($primary-color, .7);
+    opacity: 0;
+    z-index: 10;
+    transition: opacity .2s ease-out-quad;
+    pointer-events: none;
+
+
+    ul {
+      position: absolute;
+      top: 62px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+      transition-property: transform;
+      transition-duration: .2s;
+      transition-timing-function: ease-in-quad;
+
+      li {
+        position: relative;
+        text-align: center;
+
+        a {
+          padding: 0 12px;
+          color: $white;
+          font-size: 40px;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          &::after {
+            position: absolute;
+            top: 10px;
+            left: auto;
+            display: block;
+            content: "";
+            height: 0%;
+            width: 4px;
+            background: #ee1848;
+            transition: width .2s ease-out-quad;
+          }
+
+          &:hover {
+            &::after {
+              left: 0px;
+              right: auto;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &.open {
+      opacity: 1;
+      pointer-events: auto;
+
+      ul {
+        transition-timing-function: ease-out-quad;
+      }
+    }
+  }
+
+}//#menu-wrapper
+.light {
+  .menu-toggle {
+    color: $white;
+  }
+  .label-menu {
+    border: 2px solid $white;
+  }
+}
+.dark {
+  .menu-toggle {
+    color: $primary-color;
+  }
+  .label-menu {
+    border: 2px solid $primary-color;
+  }
+}
+.no-touch {
+  .light {
+    .menu-toggle {
+      &:hover {
+        background-color: $white;
+        color: $primary-color;
+        &.open {
+          background: none;
+        }
+      }
+    }
+  }
+  .dark {
+    .menu-toggle {
+      &:hover {
+        background-color: $primary-color;
+        color: $white;
+        &.open {
+          background: none;
+        }
+      }
+    }
+  }
+}//.no-touch

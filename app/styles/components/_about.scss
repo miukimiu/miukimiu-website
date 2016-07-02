@@ -1,0 +1,23 @@
+/* *************************************************
+** About
+***************************************************/
+.about {
+    padding-top: 80px;
+
+  &__pic {
+    border-radius: 50%;
+    max-width: 220px;
+
+    @media (min-width: $breakpoint-sm) {
+      max-width: 100%;
+    }
+  }
+}
+.social-icon a {
+    color: $gray;
+    padding: 5px;
+    display: inline-block;
+}
+.social-icon a:hover {
+    color: #707070;
+}

@@ -1,37 +1,90 @@
-// typography
-h2,
-h3 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+/************************
+Fonts
+************************/
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|Francois+One|Lato|Oswald);
+
+$logo-font: 'Francois One', sans-serif;
+$menu-font: 'Oswald', sans-serif;
+$title-font: 'Lato', sans-serif;
+$reg-font: 'PT Sans', serif;
+
+/* *************************************************
+** icons
+***************************************************/
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-y9yh1j');
+	src:url('../fonts/icomoon.eot?#iefix-y9yh1j') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-y9yh1j') format('woff'),
+		url('../fonts/icomoon.ttf?-y9yh1j') format('truetype'),
+		url('../fonts/icomoon.svg?-y9yh1j#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-h2 {
-    font-weight: $font-bold;
-    font-size: 18px;
-    color: $color-text;
-    line-height: 24px;
-    padding-bottom: $gutter-xxs;
+/************************
+Typi
+************************/
+$breakpoints: (
+  small: $breakpoint-sm
+);
+
+html {
+  @include typi-base();
 }
-h3 {
-    font-weight: $font-regular;
-    color: $color-text;
-    font-size: 16px;
-    line-height: 22px;
-    padding-bottom: $gutter-sm;
+
+$typi: (
+  null: 16px,
+  small: 16px
+);
+
+
+$h1-map: (
+  null: (78px, 1),
+	small: (135px, 1)
+);
+$h2-home-map: (
+  null: 35px,
+  small: 62px
+);
+$h2-map: (
+  null: 35px,
+  small: 50px
+);
+$h2-about-map: (
+  null: 20px,
+	small: 25px
+);
+$h3-map: (
+  null: 16px,
+	small: 18px
+);
+$h4-map: (
+	null: 14px,
+	small: 16px
+);
+$h5-map: (
+	null: 14px,
+	small: 16px
+);
+
+h1 { @include typi($h1-map) }
+h2 { @include typi($h2-map) }
+h3 { @include typi($h3-map) }
+h4 { @include typi($h4-map) }
+h5 { @include typi($h5-map) }
+p {@include typi($typi)}
+
+.home {
+  h2 {
+    @include typi($h2-home-map);
+  }
 }
-.lead {
-    font-size: 16px;
-    color: $color-text-bg;
-    line-height: 22px;
-    text-align: center;
+.about {
+  h2 {
+    @include typi($h2-about-map);
+  }
 }
-p {
-    font-size: 14px;
-    color: $color-text-bg;
-    line-height: 19px;
-}
-hr {
-    border-top: 2px solid $color-yellow;
-    width: 100px;
+.btn {
+  @include typi($typi)
 }
