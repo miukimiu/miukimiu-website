@@ -51,7 +51,7 @@
     .close {
       display: block;
       position: absolute;
-      top: -2px;
+      top: -15px;
       left: -100px;
       font-size: 50px;
       opacity: 0;
@@ -83,7 +83,7 @@
         transform: rotate(-45deg);
         transition-delay: .2s, 0s;
         color: $white;
-        left: 3px;
+        left: -2px;
       }
 
       &:hover {
