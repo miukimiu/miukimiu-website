@@ -1,0 +1,18 @@
+body {
+	background: #fff;
+}
+
+.app {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	img {
+		width: 75%;
+		max-width: 300px;
+		height: auto;
+		align-self: center;
+		align-items: baseline;
+		opacity: 0;
+	}
+}
