@@ -1,0 +1,13 @@
+.welcome {
+  display: flex;
+  background: $color-primary;
+  flex-direction: column;
+  padding: ($space * 2) $space;
+
+  &__air-balloon {
+    // display: inline-flex;
+  }
+  &_logo {
+    // display: inline-flex;
+  }
+}
