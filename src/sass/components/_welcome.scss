@@ -2,12 +2,12 @@
   display: flex;
   background: $color-primary;
   flex-direction: column;
-  padding: ($space * 2) $space;
+  padding: ($space * 4) $space;
 
-  &__air-balloon {
-    // display: inline-flex;
+  &__planet {
+    display: inline-flex;
   }
-  &_logo {
-    // display: inline-flex;
+  > svg {
+    margin: 0 auto;
   }
 }

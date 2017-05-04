@@ -1,10 +1,14 @@
 import React from 'react';
-import airBalloon from '../../images/airBalloon.svg';
+import { KawaiiPlanet } from 'react-kawaii';
 import logo from '../../images/logo.svg';
 
 const Welcome = () => (
   <section className="welcome">
-    <img className="welcome__air-balloon" src={airBalloon} alt="" />
+    <KawaiiPlanet
+      size={200}
+      mood="blissful"
+      color="#46F4D4"
+    />
     <img className="welcome__logo" src={logo} alt="" />
   </section>
 );
