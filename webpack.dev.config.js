@@ -44,17 +44,17 @@ module.exports = {
         ]
       },
       {
+        test: /\.(jpg|png|gif|svg)$/i,
+        use: [
+          'file-loader?name=[path][name].[ext]?[hash]&outputPath=/assets/&publicPath=/assets/'
+        ]
+      },
+      {
         test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         use: [
           'file-loader'
         ]
       },
-      {
-        test: /\.(jpg|png|gif|svg)$/i,
-        use: [
-          'file-loader?name=[path][name].[ext]?[hash]&outputPath=/assets/&publicPath=/assets/'
-        ]
-      }
     ]
   },
   resolve: {

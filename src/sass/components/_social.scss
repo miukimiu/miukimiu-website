@@ -1,0 +1,14 @@
+.social-links {
+  justify-content: center;
+  display: flex;
+  padding: $space;
+
+  > a {
+    padding: 0 ($space / 2);
+    color: rgba($color-white, 0.8);
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

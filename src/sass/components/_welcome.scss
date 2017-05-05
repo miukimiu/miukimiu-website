@@ -2,12 +2,15 @@
   display: flex;
   background: $color-primary;
   flex-direction: column;
-  padding: ($space * 4) $space;
+  padding: ($space * 4) $space ($space * 3);
 
   &__planet {
     display: inline-flex;
   }
-  > svg {
+  .kawaiiElementWrapper {
     margin: 0 auto;
+  }
+  .section__separator {
+    fill: $color-white;
   }
 }
