@@ -69,7 +69,7 @@ gulp.task("build-production", function() {
 // });
 
 gulp.task('deploy', function() {
-  return gulp.src('./styleguide/**')
+  return gulp.src('./dist/**')
     .pipe(ghPages());
 });
 
