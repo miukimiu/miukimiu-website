@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist/production',
     filename: 'js/bundle-[hash].js',
-    publicPath: ''
+    publicPath: '/'
   },
   module: {
     rules: [{
