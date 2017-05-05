@@ -1,185 +1,201 @@
-// generated on 2016-07-02 using generator-webapp 2.1.0
-const gulp = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
-const browserSync = require('browser-sync');
-const del = require('del');
-const wiredep = require('wiredep').stream;
+var gulp = require('gulp'),
+  webpack = require("webpack"),
+  webpackDevServer = require("webpack-dev-server"),
+  webpackDevConfig = require("./webpack.dev.config.js"),
+  webpackStagingConfig = require("./webpack.staging.config.js"),
+  webpackProductionConfig = require("./webpack.production.config.js"),
+  gutil = require('gulp-util'),
+  babel = require('babel-core/register'),
+  mocha = require('gulp-mocha'),
+  spawn = require('child_process').spawn,
+  port = 3000,
+  open = require('open'),
+  git = require('gulp-git'),
+  config = require('./config'),
+  chalk = require('chalk'),
+  figlet = require('figlet'),
+  clean = require('gulp-clean'),
+  nullCompiler = require('./nullCompiler'),
+  ghPages = require('gulp-gh-pages');
 
-const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
 
-var ghPages = require('gulp-gh-pages');
+gulp.task('html', function() {
+  var n = (['production', 'staging'].indexOf(process.argv[4]) > -1 && process.argv[4]) || 'staging';
+  return gulp.src('src/index.html')
+    .pipe(gulp.dest('dist/' + n));
+});
+
+gulp.task('build', ['clean', 'test', 'html'], function() {
+  var n = (['production', 'staging'].indexOf(process.argv[4]) > -1 && process.argv[4]) || 'staging';
+  gulp.start('build-' + n);
+});
+
+gulp.task("build-staging", function() {
+  // run webpack
+  webpack(webpackStagingConfig, function(err, stats) {
+    if (err) throw new gutil.PluginError("webpack", err);
+    gutil.log("[webpack:errors]", stats.compilation.errors.toString({
+      colors: true
+    }));
+    gutil.log("[webpack:warnings]", stats.compilation.warnings.toString({
+      colors: true
+    }));
+    console.log('webpack compile success.');
+  });
+});
+gulp.task("build-production", function() {
+  // run webpack
+  webpack(webpackProductionConfig, function(err, stats) {
+    if (err) throw new gutil.PluginError("webpack", err);
+    gutil.log("[webpack:errors]", stats.compilation.errors.toString({
+      colors: true
+    }));
+    gutil.log("[webpack:warnings]", stats.compilation.warnings.toString({
+      colors: true
+    }));
+    console.log('webpack compile success.');
+  });
+});
+
+// todo: decide if called push or remote
+// so far I decided to call it deploy (because the boilerplate, hopes the dev
+// sitcks with a PaaS / Heroku kind of)
+// gulp.task('deploy', function(){
+//     config.git.remoteList.forEach(function (v, k) {
+//         git.push(v, ['master'], null, function (err) {
+//             if (err) throw err;
+//         });
+//     });
+// });
 
 gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
+  return gulp.src('./dist/**')
     .pipe(ghPages());
 });
 
-gulp.task('styles', () => {
-  return gulp.src('app/styles/*.scss')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
-      includePaths: ['.']
-    }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-    .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('.tmp/styles'))
-    .pipe(reload({stream: true}));
-});
 
-gulp.task('scripts', () => {
-  return gulp.src('app/scripts/**/*.js')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.babel())
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({stream: true}));
-});
-
-function lint(files, options) {
-  return gulp.src(files)
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.eslint(options))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
-}
-
-gulp.task('lint', () => {
-  return lint('app/scripts/**/*.js', {
-    fix: true
-  })
-    .pipe(gulp.dest('app/scripts'));
-});
-gulp.task('lint:test', () => {
-  return lint('test/spec/**/*.js', {
-    fix: true,
-    env: {
-      mocha: true
-    }
-  })
-    .pipe(gulp.dest('test/spec/**/*.js'));
-});
-
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
-    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true,
-      // don't remove IDs from SVGs, they are often used
-      // as hooks for embedding and styling
-      svgoPlugins: [{cleanupIDs: false}]
-    })))
-    .pipe(gulp.dest('dist/images'));
-});
-
-gulp.task('cv', () => {
-  return gulp.src('app/cv/*')
-    .pipe(gulp.dest('dist/cv'));
-});
-
-gulp.task('fonts', () => {
-  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('app/fonts/**/*'))
-    .pipe(gulp.dest('.tmp/fonts'))
-    .pipe(gulp.dest('dist/fonts'));
-});
-
-gulp.task('extras', () => {
-  return gulp.src([
-    'app/*.*',
-    '!app/*.html'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'));
-});
-
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
-
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
-  browserSync({
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: ['.tmp', 'app'],
-      routes: {
-        '/bower_components': 'bower_components'
+gulp.task('unit_test', function() {
+  return gulp.src('./test/unit_tests/**/*.spec.js', {
+      read: false
+    })
+    .pipe(mocha({
+      compilers: {
+        js: babel
       }
-    }
-  });
-
-  gulp.watch([
-    'app/*.html',
-    'app/images/**/*',
-    '.tmp/fonts/**/*'
-  ]).on('change', reload);
-
-  gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch('app/fonts/**/*', ['fonts']);
-  gulp.watch('bower.json', ['wiredep', 'fonts']);
-});
-
-gulp.task('serve:dist', () => {
-  browserSync({
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: ['dist']
-    }
-  });
-});
-
-gulp.task('serve:test', ['scripts'], () => {
-  browserSync({
-    notify: false,
-    port: 9000,
-    ui: false,
-    server: {
-      baseDir: 'test',
-      routes: {
-        '/scripts': '.tmp/scripts',
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
-
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch('test/spec/**/*.js').on('change', reload);
-  gulp.watch('test/spec/**/*.js', ['lint:test']);
-});
-
-// inject bower components
-gulp.task('wiredep', () => {
-  gulp.src('app/styles/*.scss')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
     }))
-    .pipe(gulp.dest('app/styles'));
-
-  gulp.src('app/*.html')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./
-    }))
-    .pipe(gulp.dest('app'));
+    .once('error', function() {
+      process.exit(1);
+    })
+  // TODO: this exists gulp completely it seems
+  // so there's an NPM TEST script instead for Travis CI
+  // maybe find better solution in the future
+  // .once('end', function () {
+  //     process.exit(1);
+  // })
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'cv'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+// gulp.task('end2end_test', function () {
+//     return gulp.src('./test/end2end_tests/**/*.spec.js', { read: false })
+//                 .pipe(mocha({
+//                     timeout: 5000,
+//                     compilers: {
+//                         js: babel,
+//                         png: nullCompiler,
+//                         jpg: nullCompiler,
+//                         gif: nullCompiler,
+//                         svg: nullCompiler,
+//                         sass: nullCompiler,
+//                         css: nullCompiler
+//                     }
+//                 }))
+//                 .once('end', function () {
+//                     process.exit();
+//                 });
+// });
+
+gulp.task('test', ['unit_test']);
+
+gulp.task('openBrowser', function() {
+  open('http://localhost:' + port, function(err) {
+    if (err) throw err;
+  });
 });
 
-gulp.task('default', ['clean'], () => {
-  gulp.start('build');
+gulp.task('watch', function() {
+  gulp.watch('./src/index.html', ['html']);
+  gulp.watch('./src/js/**/*.js', ['test']);
 });
+
+gulp.task('node-server', function(cb) {
+  var cmd = spawn('node', ['server.js'], {
+    stdio: 'inherit'
+  });
+  cmd.on('close', function(code) {
+    console.log('my-task exited with code ' + code);
+    cb(code);
+  });
+});
+
+gulp.task('preview', function(cb) {
+
+  var n = (['production', 'staging'].indexOf(process.argv[4]) > -1 && process.argv[4]) || false;
+
+  if (n) {
+    process.env.NODE_ENV = n;
+
+    var cmd = spawn('node', ['server.js'], {
+      stdio: 'inherit'
+    });
+
+    cmd.on('close', function(code) {
+      console.log('my-task exited with code ' + code);
+      cb(code);
+    });
+
+    setTimeout(function() {
+      open('http://localhost:' + port, function(err) {
+        if (err) throw err;
+      });
+    }, 1800);
+
+  } else {
+    console.log('Error: use the command `gulp preview --env [ENVIRONMENT]` to preview!')
+  }
+
+
+});
+
+gulp.task('set-dev-env', function() {
+  return process.env.NODE_ENV = 'development';
+});
+
+gulp.task('set-prod-env', function() {
+  return process.env.NODE_ENV = 'production';
+});
+
+gulp.task('banner', function() {
+  spawn('clear', [null], {
+    stdio: 'inherit'
+  });
+  console.log(
+    chalk.magenta(
+      figlet.textSync('Reactatouille', {
+        horizontalLayout: 'full'
+      })
+    ),
+    chalk.yellow.bold('\n' + ' ' + 'Boilerplate'),
+    chalk.yellow('by Punkbit'),
+    '\n',
+    '\n'
+  );
+});
+
+gulp.task('clean', function() {
+  var n = (['production', 'staging'].indexOf(process.argv[4]) > -1 && process.argv[4]) || false;
+  return gulp.src('./dist/' + n, {
+      read: false
+    })
+    .pipe(clean());
+});
+
+gulp.task('default', ['banner', 'set-dev-env', 'node-server', 'watch']);
