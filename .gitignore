@@ -6,7 +6,3 @@ bower_components
 test/bower_components
 .sass-cache
 .publish
-css
-fonts
-images
-js
