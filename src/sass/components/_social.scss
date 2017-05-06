@@ -5,10 +5,10 @@
 
   > a {
     padding: 0 ($space / 2);
-    color: rgba($color-white, 0.8);
+    color: rgba($white, 0.8);
 
     &:hover {
-      color: $color-white;
+      color: $white;
     }
   }
 }

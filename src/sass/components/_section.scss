@@ -8,4 +8,11 @@
     width: 100%;
     height: 50px;
   }
+
+  &--light {
+    color: $dark-grey;
+  }
+  &--dark {
+    color: $white;
+  }
 }

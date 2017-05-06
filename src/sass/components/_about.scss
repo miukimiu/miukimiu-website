@@ -1,7 +1,14 @@
 .about {
-  max-width: 800px;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  padding: ($space * 2) $space;
+
+  article {
+    max-width: 800px;
+    padding: ($space * 2) $space ($space * 6);
+  }
+
+  &__separator {
+    fill: $blue;
+  }
 }

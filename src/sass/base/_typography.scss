@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans');
+// @import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:600');
 
 body {
   font-family: 'Droid Serif', serif;
@@ -46,10 +47,11 @@ h4,
 h5,
 h6 {
   /* Change heading typefaces here */
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-top: 1.5rem;
   margin-bottom: 0;
   line-height: 1.5rem;
+  font-weight: 600;
 }
 h1 {
   font-size: 4.242rem;

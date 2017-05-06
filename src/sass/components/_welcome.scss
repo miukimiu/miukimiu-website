@@ -1,6 +1,6 @@
 .welcome {
   display: flex;
-  background: $color-primary;
+  background: $dark-blue;
   flex-direction: column;
   padding: ($space * 4) $space ($space * 3);
 
@@ -11,6 +11,6 @@
     margin: 0 auto;
   }
   .section__separator {
-    fill: $color-white;
+    fill: $white;
   }
 }
