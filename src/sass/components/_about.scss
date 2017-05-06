@@ -3,12 +3,7 @@
   justify-content: center;
   margin: 0 auto;
 
-  article {
-    max-width: 800px;
+  .section__article {
     padding: ($space * 2) $space ($space * 6);
-  }
-
-  &__separator {
-    fill: $blue;
   }
 }

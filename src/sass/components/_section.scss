@@ -1,5 +1,8 @@
 .section {
   position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 
   &__separator {
     position: absolute;
@@ -14,5 +17,9 @@
   }
   &--dark {
     color: $white;
+  }
+  &__article {
+    max-width: 800px;
+    width: 100%;
   }
 }
