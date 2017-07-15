@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lora|Open+Sans);/* -------------------------------------------------------------
+@import url(https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:600);/* -------------------------------------------------------------
   Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
   By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
 
@@ -70,9 +70,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  font-family: 'Droid Serif', serif; }
-
 /*! Typebase.less v0.1.0 | MIT License */
 /* Setup */
 html {
@@ -116,10 +113,11 @@ h4,
 h5,
 h6 {
   /* Change heading typefaces here */
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-top: 1.5rem;
   margin-bottom: 0;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  font-weight: 600; }
 
 h1 {
   font-size: 4.242rem;
@@ -203,12 +201,12 @@ Creation date: 05/05/2017 01:36
 .flaticon-instagram-logo:before {
   content: "\F103"; }
 
-section {
-  padding: 0 1.25rem; }
+.text-center {
+  text-align: center; }
 
 .welcome {
   display: flex;
-  background: #271447;
+  background: #0C1558;
   flex-direction: column;
   padding: 5rem 1.25rem 3.75rem; }
   .welcome__planet {
@@ -219,11 +217,11 @@ section {
     fill: #ffffff; }
 
 .about {
-  max-width: 800px;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  padding: 2.5rem 1.25rem; }
+  margin: 0 auto; }
+  .about .section__article {
+    padding: 2.5rem 1.25rem 7.5rem; }
 
 .social-links {
   justify-content: center;
@@ -236,10 +234,30 @@ section {
       color: #ffffff; }
 
 .section {
-  position: relative; }
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
   .section__separator {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 50px; }
+  .section--light {
+    color: #555; }
+  .section--dark {
+    color: #ffffff; }
+  .section__article {
+    max-width: 800px;
+    width: 100%; }
+
+.work {
+  background: #4B8CE8; }
+  .work__separator {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    fill: #4B8CE8; }

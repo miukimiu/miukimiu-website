@@ -86,32 +86,7 @@ gulp.task('unit_test', function() {
     .once('error', function() {
       process.exit(1);
     })
-  // TODO: this exists gulp completely it seems
-  // so there's an NPM TEST script instead for Travis CI
-  // maybe find better solution in the future
-  // .once('end', function () {
-  //     process.exit(1);
-  // })
 });
-
-// gulp.task('end2end_test', function () {
-//     return gulp.src('./test/end2end_tests/**/*.spec.js', { read: false })
-//                 .pipe(mocha({
-//                     timeout: 5000,
-//                     compilers: {
-//                         js: babel,
-//                         png: nullCompiler,
-//                         jpg: nullCompiler,
-//                         gif: nullCompiler,
-//                         svg: nullCompiler,
-//                         sass: nullCompiler,
-//                         css: nullCompiler
-//                     }
-//                 }))
-//                 .once('end', function () {
-//                     process.exit();
-//                 });
-// });
 
 gulp.task('test', ['unit_test']);
 

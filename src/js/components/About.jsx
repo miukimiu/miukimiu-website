@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => (
   <section className="section section--light about">
-    <article>
+    <article className="section__article">
       <h2>
         I'm the girl that started doing websites as a hobby and one day realised that it could be my job.
       </h2>
@@ -16,14 +16,6 @@ const About = () => (
         My friends say that I'm a geek, but I like to say that I'm a friendly geek. I like to travel, making music and create open source projects.
       </p>
     </article>
-    <svg
-      className="section__separator about__separator"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-    >
-        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-    </svg>
   </section>
 );
 

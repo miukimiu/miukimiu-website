@@ -1,8 +1,18 @@
 import React from 'react';
+import { KawaiiIceCream } from 'react-kawaii';
 
 const Work = () => (
   <section className="section section--dark work">
-    <h2>Work</h2>
+    <svg
+      className="work__separator"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+    >
+        <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+    </svg>
+    <article className="section__article">
+    </article>
   </section>
 );
 
