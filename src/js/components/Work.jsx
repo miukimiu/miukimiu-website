@@ -12,8 +12,6 @@ const Work = () => (
         <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
     </svg>
     <article className="section__article">
-      <h2>I love my work</h2>
-      <p>On my free time I like to </p>
     </article>
   </section>
 );
