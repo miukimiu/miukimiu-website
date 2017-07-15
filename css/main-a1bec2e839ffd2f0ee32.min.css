@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:600);/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+/**
+ * Usage:
+ *
+ *		@include placeholder {
+ *	    	font-style:italic;
+ *	    	color: white;
+ *	    	font-weight:100;
+ *		}
+ *
+ */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: 'Larsseit';
+  font-weight: 100; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*! Typebase.less v0.1.0 | MIT License */
+/* Setup */
+html {
+  /* Change default typefaces here */
+  font-family: 'Lora', serif;
+  font-size: 137.5%;
+  -webkit-font-smoothing: antialiased; }
+
+/* Copy & Lists */
+p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0; }
+
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+ul li,
+ol li {
+  line-height: 1.5rem; }
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  font-weight: 600; }
+
+h1 {
+  font-size: 4.242rem;
+  line-height: 4.5rem;
+  margin-top: 3rem; }
+
+h2 {
+  font-size: 2.828rem;
+  line-height: 3rem;
+  margin-top: 3rem; }
+
+h3 {
+  font-size: 1.414rem; }
+
+h4 {
+  font-size: 0.707rem; }
+
+h5 {
+  font-size: 0.4713333333333333rem; }
+
+h6 {
+  font-size: 0.3535rem; }
+
+/* Tables */
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse; }
+
+table td,
+table th {
+  padding: 0;
+  line-height: 33px; }
+
+/* Code blocks */
+code {
+  vertical-align: bottom; }
+
+/* Leading paragraph text */
+.lead {
+  font-size: 1.414rem; }
+
+/* Hug the block above you */
+.hug {
+  margin-top: 0; }
+
+/*
+Flaticon icon font: Flaticon
+Creation date: 05/05/2017 01:36
+*/
+@font-face {
+  font-family: "Flaticon";
+  src: url(/fonts/flaticon/Flaticon.eot);
+  src: url(/fonts/flaticon/Flaticon.eot?#iefix) format("embedded-opentype"), url(/fonts/flaticon/Flaticon.woff) format("woff"), url(/fonts/flaticon/Flaticon.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.flaticon-logo:before {
+  content: "\F100"; }
+
+.flaticon-twitter-logo:before {
+  content: "\F101"; }
+
+.flaticon-dribbble-logo:before {
+  content: "\F102"; }
+
+.flaticon-instagram-logo:before {
+  content: "\F103"; }
+
+.text-center {
+  text-align: center; }
+
+.welcome {
+  display: flex;
+  background: #0C1558;
+  flex-direction: column;
+  padding: 5rem 1.25rem 3.75rem; }
+  .welcome__planet {
+    display: inline-flex; }
+  .welcome .kawaiiElementWrapper {
+    margin: 0 auto; }
+  .welcome .section__separator {
+    fill: #ffffff; }
+
+.about {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; }
+  .about .section__article {
+    padding: 2.5rem 1.25rem 7.5rem; }
+
+.social-links {
+  justify-content: center;
+  display: flex;
+  padding: 1.25rem; }
+  .social-links > a {
+    padding: 0 0.625rem;
+    color: rgba(255, 255, 255, 0.8); }
+    .social-links > a:hover {
+      color: #ffffff; }
+
+.section {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+  .section__separator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px; }
+  .section--light {
+    color: #555; }
+  .section--dark {
+    color: #ffffff; }
+  .section__article {
+    max-width: 800px;
+    width: 100%; }
+
+.work {
+  background: #4B8CE8; }
+  .work__separator {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    fill: #4B8CE8; }
