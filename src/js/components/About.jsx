@@ -3,9 +3,9 @@ import React from 'react';
 const About = () => (
   <section className="section section--light about">
     <article className="section__article">
-      <h2>
+      <h3>
         I'm the girl that started doing websites as a hobby and one day realised that it could be my job.
-      </h2>
+      </h3>
       <p>
         I self-taught myself how to be an UI developer, learning from tutorials on the internet or reading books. After I had got my first job in tech, I decided to take my education further and enrolled in some courses in web development, Mobile Development and Design and recently on a bachelor's degree in Digital Technology, Design and Innovation.
       </p>

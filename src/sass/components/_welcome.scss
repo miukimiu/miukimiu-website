@@ -2,7 +2,10 @@
   display: flex;
   background: $dark-blue;
   flex-direction: column;
-  padding: ($space * 4) $space ($space * 3);
+
+  &.section {
+    padding: ($space * 4) $space ($space * 3);
+  }
 
   &__planet {
     display: inline-flex;
@@ -12,5 +15,9 @@
   }
   .section__separator {
     fill: $white;
+  }
+  &__logo {
+    max-width: 390px;
+    width: 100%;
   }
 }
