@@ -1,0 +1,20 @@
+.projects {
+  background: $light-blue;
+
+  &__separator {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    fill: $light-blue;
+  }
+  &__articles {
+    display: flex;
+    margin: (-$space) 0 ($space) (-$space);
+  }
+  &__article {
+    flex: 1;
+    padding: $space 0 0 $space;
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => (
   <section className="section section--light about">
-    <article className="section__article">
+    <article className="section__container">
       <h3>
         I'm the girl that started doing websites as a hobby and one day realised that it could be my job.
       </h3>
