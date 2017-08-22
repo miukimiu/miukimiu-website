@@ -1,27 +1,18 @@
-/**
- * Usage:
- *
- *		@include placeholder {
- *	    	font-style:italic;
- *	    	color: white;
- *	    	font-weight:100;
- *		}
- *
- */
-@mixin placeholder {
-	&::-webkit-input-placeholder {
-		@content;
-	}
-
-	&:-moz-placeholder {
-		@content;
-	}
-
-	&::-moz-placeholder {
-		@content;
-	}
-
-	&:-ms-input-placeholder {
-		@content;
-	}
+/************************
+Breakpoints
+************************/
+@mixin tablet-down {
+    @media only screen and (max-width: $tablet - 1) {
+        @content;
+    }
+}
+@mixin tablet-up {
+    @media only screen and (min-width: $tablet) {
+        @content;
+    }
+}
+@mixin desktop-up {
+    @media only screen and (min-width: $desktop) {
+        @content;
+    }
 }

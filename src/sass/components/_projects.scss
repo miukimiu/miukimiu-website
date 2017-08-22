@@ -1,4 +1,5 @@
 .projects {
+  padding-bottom: $space * 2;
   background: $light-blue;
 
   &__separator {
@@ -10,11 +11,16 @@
     fill: $light-blue;
   }
   &__articles {
-    display: flex;
-    margin: (-$space) 0 ($space) (-$space);
+    @include tablet-up() {
+      display: flex;
+      margin: (-$space) 0 ($space) (-$space);
+    }
+
   }
   &__article {
-    flex: 1;
-    padding: $space 0 0 $space;
+    @include tablet-up() {
+      flex: 1;
+      padding: $space 0 0 $space;
+    }
   }
 }

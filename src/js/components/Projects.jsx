@@ -1,5 +1,5 @@
 import React from 'react';
-import link from '../../images/icons/link.svg';
+import ProjectLink from './ProjectLink';
 
 const Projects = () => (
   <section className="section section--light projects">
@@ -17,18 +17,19 @@ const Projects = () => (
         <article className="projects__article">
           <h3>Cassette Tape</h3>
           <p>A Chrome experiment that I presented at the Google I/0 Dublin in 2016. This project explores the web audio API and the possibility to record the voice on a browser.</p>
-          <a href="https://miukimiu.github.io/cassette-tape">
-            <img alt="" src={link} />
-            <span>miukimiu.github.io/cassette-tape</span>
-          </a>
+
+          <ProjectLink
+            link="https://miukimiu.github.io/cassette-tape"
+            text="miukimiu.github.io/cassette-tape"
+          />
         </article>
         <article className="projects__article">
           <h3>React Kawaii</h3>
           <p>React Kawaii is a library of cute SVG illustrations (react components). Ideal to give some cuteness and personality to your react application.</p>
-          <a href="https://miukimiu.github.io/cassette-tape/">
-            <img alt="" src={link} />
-            <span>miukimiu.github.io/cassette-tape</span>
-          </a>
+          <ProjectLink
+            link="https://miukimiu.github.io/cassette-tape"
+            text="miukimiu.github.io/cassette-tape"
+          />
         </article>
       </div>
     </div>
