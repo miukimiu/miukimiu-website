@@ -16,7 +16,7 @@ const Projects = () => (
       <div className="projects__articles">
         <article className="projects__article">
           <h3>Cassette Tape</h3>
-          <p>A Chrome experiment that I presented at the Google I/0 Dublin in 2016. This project explores the web audio API and the possibility to record the voice on a browser.</p>
+          <p>A Chrome experiment that I presented at the Google I/0 Dublin in 2016. This project explores the web audio API.</p>
 
           <ProjectLink
             link="https://miukimiu.github.io/cassette-tape"
