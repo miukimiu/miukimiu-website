@@ -57,17 +57,6 @@ gulp.task("build-production", function() {
   });
 });
 
-// todo: decide if called push or remote
-// so far I decided to call it deploy (because the boilerplate, hopes the dev
-// sitcks with a PaaS / Heroku kind of)
-// gulp.task('deploy', function(){
-//     config.git.remoteList.forEach(function (v, k) {
-//         git.push(v, ['master'], null, function (err) {
-//             if (err) throw err;
-//         });
-//     });
-// });
-
 gulp.task('deploy', function() {
   return gulp.src('./dist/production/**/*')
     .pipe(ghPages());
@@ -167,9 +156,7 @@ gulp.task('banner', function() {
 
 gulp.task('clean', function() {
   var n = (['production', 'staging'].indexOf(process.argv[4]) > -1 && process.argv[4]) || false;
-  return gulp.src('./dist/' + n, {
-      read: false
-    })
+  return gulp.src(['./js/' + n, './css/' + n])
     .pipe(clean());
 });
 

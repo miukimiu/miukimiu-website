@@ -27,8 +27,8 @@ const Projects = () => (
           <h3>React Kawaii</h3>
           <p>React Kawaii is a library of cute SVG illustrations (react components). Ideal to give some cuteness and personality to your react application.</p>
           <ProjectLink
-            link="https://miukimiu.github.io/cassette-tape"
-            text="miukimiu.github.io/cassette-tape"
+            link="https://github.com/miukimiu/react-kawaii"
+            text="github.com/miukimiu/react-kawaii"
           />
         </article>
       </div>
