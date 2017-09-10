@@ -26,23 +26,10 @@ gulp.task('html', function() {
 });
 
 gulp.task('build', ['clean', 'test', 'html'], function() {
-  var n = (['production', 'staging'].indexOf(process.argv[4]) > -1 && process.argv[4]) || 'staging';
+  var n = (['production'].indexOf(process.argv[4]) > -1 && process.argv[4]) || 'production';
   gulp.start('build-' + n);
 });
 
-gulp.task("build-staging", function() {
-  // run webpack
-  webpack(webpackStagingConfig, function(err, stats) {
-    if (err) throw new gutil.PluginError("webpack", err);
-    gutil.log("[webpack:errors]", stats.compilation.errors.toString({
-      colors: true
-    }));
-    gutil.log("[webpack:warnings]", stats.compilation.warnings.toString({
-      colors: true
-    }));
-    console.log('webpack compile success.');
-  });
-});
 gulp.task("build-production", function() {
   // run webpack
   webpack(webpackProductionConfig, function(err, stats) {
