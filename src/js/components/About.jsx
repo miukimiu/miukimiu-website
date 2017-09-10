@@ -4,16 +4,16 @@ const About = () => (
   <section className="section section--light about">
     <article className="section__container">
       <h3>
-        I'm the girl that started doing websites as a hobby and one day realised that it could be my job.
+        Hi, my name is Miuki Miu (real name Elizabet) and I’m a UX/UI Designer & Developer living in Dublin, Ireland.
       </h3>
       <p>
-        I self-taught myself how to be an UI developer, learning from tutorials on the internet or reading books. After I had got my first job in tech, I decided to take my education further and enrolled in some courses in web development, Mobile Development and Design and recently on a bachelor's degree in Digital Technology, Design and Innovation.
+        I’m friendly and eager to work and learn with others. Each position I have held has broadened my skill set and career goals towards forward-thinking technology.
       </p>
       <p>
-          I consider myself an experimentalist and a long life learner. I'm always trying to learn something new and pushing boundaries. I'm the type of UI Developer that cares about design and user experience.  I love to prototype, explore new ideas and being part of creative teams. Always trying to explore new front-end technologies, data and audio visualisation.
+        I am obsessed with expanding my craft, solving challenging problems and staying on the bleeding edge. I have a passion for creating, and discovering, new and effective digital experiences. My friends say that I'm a geek, but I like to say that I'm a friendly geek. I like to travel, making music and create open source projects.
       </p>
       <p>
-        My friends say that I'm a geek, but I like to say that I'm a friendly geek. I like to travel, making music and create open source projects.
+        I'm currently employed at Showtime Analytics working on UI Design, Data Visualisation and developing our Design System.
       </p>
     </article>
   </section>
