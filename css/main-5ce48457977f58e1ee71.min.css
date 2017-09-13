@@ -1,0 +1,312 @@
+@import url(https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:600);/************************
+Breakpoints
+************************/
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+/************************
+Breakpoints
+************************/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  font-family: 'Larsseit';
+  font-weight: 100; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*! Typebase.less v0.1.0 | MIT License */
+/* Setup */
+html {
+  /* Change default typefaces here */
+  font-family: 'Lora', serif;
+  font-size: 137.5%;
+  -webkit-font-smoothing: antialiased; }
+
+/* Copy & Lists */
+p {
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0; }
+
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem; }
+
+ul li,
+ol li {
+  line-height: 1rem; }
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  font-weight: 600; }
+
+h1 {
+  font-size: 4.242rem;
+  line-height: 4.5rem;
+  margin-top: 3rem; }
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 3rem;
+  margin-top: 3rem; }
+
+h3 {
+  font-size: 1.414rem;
+  line-height: 1.8rem; }
+
+h4 {
+  font-size: 0.707rem; }
+
+h5 {
+  font-size: 0.4713333333333333rem; }
+
+h6 {
+  font-size: 0.3535rem; }
+
+/* Tables */
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse; }
+
+table td,
+table th {
+  padding: 0;
+  line-height: 33px; }
+
+/* Code blocks */
+code {
+  vertical-align: bottom; }
+
+/* Leading paragraph text */
+.lead {
+  font-size: 1.414rem; }
+
+/* Hug the block above you */
+.hug {
+  margin-top: 0; }
+
+/*
+Flaticon icon font: Flaticon
+Creation date: 05/05/2017 01:36
+*/
+@font-face {
+  font-family: "Flaticon";
+  src: url(/fonts/flaticon/Flaticon.eot);
+  src: url(/fonts/flaticon/Flaticon.eot?#iefix) format("embedded-opentype"), url(/fonts/flaticon/Flaticon.woff) format("woff"), url(/fonts/flaticon/Flaticon.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.flaticon-logo:before {
+  content: "\F100"; }
+
+.flaticon-twitter-logo:before {
+  content: "\F101"; }
+
+.flaticon-dribbble-logo:before {
+  content: "\F102"; }
+
+.flaticon-instagram-logo:before {
+  content: "\F103"; }
+
+.text-center {
+  text-align: center; }
+
+.welcome {
+  display: flex;
+  background: #0C1558;
+  flex-direction: column; }
+  .welcome.section {
+    padding: 4rem 1rem 3rem; }
+  .welcome__planet {
+    display: inline-flex; }
+  .welcome .kawaiiElementWrapper {
+    margin: 0 auto; }
+  .welcome .section__separator {
+    fill: #ffffff; }
+  .welcome__logo {
+    max-width: 390px;
+    width: 100%; }
+
+.about {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto; }
+  .about .section__container {
+    padding: 2rem 1rem 6rem; }
+
+.social-links {
+  justify-content: center;
+  display: flex;
+  padding: 1rem; }
+  .social-links > a {
+    padding: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.8); }
+    .social-links > a:hover {
+      color: #ffffff; }
+
+.section {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem; }
+  .section__separator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    fill: white; }
+  .section--light {
+    color: #3A3F49; }
+  .section--dark {
+    color: #ffffff; }
+  .section__container {
+    max-width: 980px;
+    width: 100%; }
+
+.work {
+  background: #4B8CE8; }
+  .work__separator {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    fill: #4B8CE8; }
+
+.projects {
+  padding-bottom: 2rem;
+  background: #F7FCFF; }
+  .projects__separator {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    fill: #F7FCFF; }
+  @media only screen and (min-width: 48em) {
+    .projects__articles {
+      display: flex;
+      margin: -1rem 0 1rem -1rem; } }
+  @media only screen and (min-width: 48em) {
+    .projects__article {
+      flex: 1;
+      padding: 1rem 0 0 1rem; } }
+
+.project-link {
+  text-decoration: none;
+  color: #4B8CE8;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  transition: all 1s linear; }
+  .project-link__img {
+    fill: #4B8CE8;
+    padding-right: 0.25rem; }
+  .project-link__text {
+    position: relative; }
+    .project-link__text:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -1px;
+      left: 0;
+      background-color: #4B8CE8;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out 0s; }
+    .project-link__text:hover:before {
+      visibility: visible;
+      transform: scaleX(1); }
