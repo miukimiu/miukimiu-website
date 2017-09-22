@@ -10,9 +10,9 @@ module.exports = {
     './js/index.js'
   ],
   output: {
-    path: __dirname + '/',
+    path: __dirname + '/dist/production',
     filename: 'js/bundle-[hash].js',
-    publicPath: '/'
+    publicPath: '/assets'
   },
   module: {
     rules: [{
@@ -31,15 +31,15 @@ module.exports = {
       },
       // { test: /\.scss$/, loader: ExtractTextPlugin.extract('style','css!sass') },
       {
-        test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         use: [
-          'file-loader?name=[path][name].[ext]&outputPath=/&publicPath=/'
+          'file-loader?name=[path][name].[ext]&outputPath=/assets/fonts/&publicPath=/assets/fonts/'
         ]
       },
       {
         test: /\.(jpg|png|gif|svg)$/i,
         use: [
-          'file-loader?name=[path][name].[ext]?[hash]&outputPath=/&publicPath=/'
+          'file-loader?name=[path][name].[ext]?[hash]&outputPath=/assets/&publicPath=/assets/'
         ]
       }
     ]
