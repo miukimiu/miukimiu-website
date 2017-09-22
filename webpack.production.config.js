@@ -10,7 +10,7 @@ module.exports = {
     './js/index.js'
   ],
   output: {
-    path: __dirname + '/dist/production',
+    path: __dirname + '/',
     filename: 'js/bundle-[hash].js',
     publicPath: '/assets'
   },
