@@ -24,7 +24,7 @@ gulp.task('html', function () {
 				.pipe(gulp.dest('dist/' + n));
 });
 
-gulp.task('build', ['clean', 'test', 'html'], function () {
+gulp.task('build', ['clean', 'html'], function () {
 	var n = (['production', 'staging'].indexOf(process.argv[4]) > -1 && process.argv[4]) || 'staging';
 	gulp.start('build-' + n);
 });
