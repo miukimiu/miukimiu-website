@@ -21,7 +21,7 @@ const SocialLinks = () => (
     <a href="https://www.linkedin.com/in/elizabetoliveira/">
       <img alt="" src={linkedinImg} />
     </a>
-    <a href="https://medium.com/@miuki_miu">
+    <a href="https://medium.com/@miukimiu">
       <img alt="" src={mediumImg} />
     </a>
     <a href="https://twitter.com/miuki_miu">

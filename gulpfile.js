@@ -25,12 +25,26 @@ gulp.task('html', function() {
     .pipe(gulp.dest('dist/' + n));
 });
 
-gulp.task('build', ['clean', 'test', 'html'], function() {
-  var n = (['production'].indexOf(process.argv[4]) > -1 && process.argv[4]) || 'production';
-  gulp.start('build-' + n);
+// gulp.task('build', ['clean', 'test', 'html'], function() {
+//   var n = (['production'].indexOf(process.argv[4]) > -1 && process.argv[4]) || 'production';
+//   gulp.start('build-' + n);
+// });
+
+gulp.task("build-production", ['clean', 'test', 'html'], function() {
+  // run webpack
+  webpack(webpackProductionConfig, function(err, stats) {
+    if (err) throw new gutil.PluginError("webpack", err);
+    gutil.log("[webpack:errors]", stats.compilation.errors.toString({
+      colors: true
+    }));
+    gutil.log("[webpack:warnings]", stats.compilation.warnings.toString({
+      colors: true
+    }));
+    console.log('webpack compile success.');
+  });
 });
 
-gulp.task("build-production", function() {
+gulp.task("build", ['clean', 'html'], function() {
   // run webpack
   webpack(webpackProductionConfig, function(err, stats) {
     if (err) throw new gutil.PluginError("webpack", err);
@@ -142,8 +156,7 @@ gulp.task('banner', function() {
 });
 
 gulp.task('clean', function() {
-  var n = (['production', 'staging'].indexOf(process.argv[4]) > -1 && process.argv[4]) || false;
-  return gulp.src(['./js/' + n, './css/' + n])
+  return gulp.src(['./js/', './css/'])
     .pipe(clean());
 });
 
