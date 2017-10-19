@@ -1,15 +1,11 @@
 import React from 'react';
-import { KawaiiPlanet } from 'react-kawaii';
 import logo from '../../images/logo.svg';
 import SocialLinks from './common/SocialLinks';
+import KawaiiPlanet from './common/KawaiiPlanet';
 
 const Welcome = () => (
   <section className="section welcome">
-    <KawaiiPlanet
-      size={200}
-      mood="blissful"
-      color="#46F4D4"
-    />
+    <KawaiiPlanet />
     <img className="welcome__logo" src={logo} alt="" />
     <SocialLinks />
     <svg
