@@ -4,6 +4,7 @@
 @import "helpers/css3-mixins-lib";
 @import "helpers/mixins";
 @import "helpers/animations";
+@import "helpers/flex";
 
 // Global styles, such as resets, fonts, colors, etc.
 @import "base/reset";
@@ -11,6 +12,7 @@
 @import "base/typography";
 @import "base/icons";
 @import "base/default";
+@import "base/grid";
 
 // Containers (Layout) contains styling for larger layout components; e.g. nav, header, footer, etc.
 //@import "containers/header";

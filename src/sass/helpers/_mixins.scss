@@ -16,3 +16,11 @@ Breakpoints
         @content;
     }
 }
+
+/************************
+Rem
+************************/
+@function rem($pxval) {
+  $base: 16;
+  @return ($pxval / $base) * 1rem;
+}

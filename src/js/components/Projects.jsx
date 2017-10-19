@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectLink from './ProjectLink';
+import ProjectLink from './common/ProjectLink';
 
 const Projects = () => (
   <section className="section section--light projects">

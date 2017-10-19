@@ -6,4 +6,21 @@ $desktop: 64em;
 
 $space: 1rem;
 
-$max-width: 1200px;
+$max-width: 970px;
+
+/************************
+Grid
+************************/
+$grid-columns: 12 !default;
+$gutter-width: 2rem !default;
+$outer-margin: 1rem !default;
+
+$breakpoints:
+  sm 48em 46rem,
+  md 64em 64rem,
+  lg 75em 71rem,
+  xlg 94em 91rem !default;
+
+$container-max-width: 970px !default;
+$gutter-compensation: $gutter-width * .5 * -1;
+$half-gutter-width: $gutter-width * .5;

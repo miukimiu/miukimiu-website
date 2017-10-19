@@ -1,10 +1,10 @@
 import React from 'react';
-import codepenImg from '../../images/social-icons/codepen.svg';
-import dribbbleImg from '../../images/social-icons/dribbble.svg';
-import githubImg from '../../images/social-icons/github.svg';
-import linkedinImg from '../../images/social-icons/linkedin.svg';
-import mediumImg from '../../images/social-icons/medium.svg';
-import twitterImg from '../../images/social-icons/twitter.svg';
+import codepenImg from '../../../images/social-icons/codepen.svg';
+import dribbbleImg from '../../../images/social-icons/dribbble.svg';
+import githubImg from '../../../images/social-icons/github.svg';
+import linkedinImg from '../../../images/social-icons/linkedin.svg';
+import mediumImg from '../../../images/social-icons/medium.svg';
+import twitterImg from '../../../images/social-icons/twitter.svg';
 
 const SocialLinks = () => (
   <section className="social-links">

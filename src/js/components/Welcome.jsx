@@ -1,7 +1,7 @@
 import React from 'react';
 import { KawaiiPlanet } from 'react-kawaii';
 import logo from '../../images/logo.svg';
-import SocialLinks from './SocialLinks';
+import SocialLinks from './common/SocialLinks';
 
 const Welcome = () => (
   <section className="section welcome">
