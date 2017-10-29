@@ -32,7 +32,48 @@
 @import "vendors/all";
 
 
-#arc-l,
-#arc-r {
-  display: none;
+// .move-area{/*normally use body*/
+//   width: 100vw;
+//   height: 100vh;
+//   padding: 10% 45%;
+// }
+// .container {
+//   width: 100%;
+// }
+.planet-container {
+  position: relative;
+}
+$eyes: 200px;
+$eye: 20px;
+$iris: 15px;
+.eyes {
+  position: absolute;
+  width: $eyes;
+  height: $eyes;
+  top: 0;
+  left: 0;
+  // background: pink;
+}
+
+.eye {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  height: $eye;
+  width: $eye;
+  background: #fff;
+  margin-top: 80px;
+  &:first-child {
+    margin: 0 40px 0 60px;
+  }
+}
+.eye:after { /*pupil*/
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  content: " ";
 }

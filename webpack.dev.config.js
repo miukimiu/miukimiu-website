@@ -74,6 +74,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     // prints more readable module names in the browser console on HMR updates
     new webpack.NamedModulesPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+    })
   ]
 };
