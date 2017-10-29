@@ -1,7 +1,12 @@
 import React from 'react';
+import separator from '../../../images/page-title/page-title-separator.svg';
 
 const PageTitle = props => (
-  <h2 className="page-title">{props.title}</h2>
+  <div className="page-title">
+    <h2>{props.title}</h2>
+    <img className="page-title__separator" src={separator} alt="" />
+  </div>
+
 );
 
 export default PageTitle;

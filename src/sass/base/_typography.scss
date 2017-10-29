@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 
+// Typesetting variables
+$baseFontSize: 22; // in pixels. This would result in 22px on desktop
+$baseLineHeight: 1.5; // how large the line height is as a multiple of font size
+$leading: $baseLineHeight * 1rem;
+
+// Rate of growth for headings
+// I actually like this to be slightly smaller then the leading. Makes for tight headings.
+$scale: 1.414;
+
+
 /*! Typebase.less v0.1.0 | MIT License */
 /* Setup */
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: rem(16);
+  // font-size: rem(16);
+  font-size: $baseFontSize / 16 * 100%;
   -webkit-font-smoothing: antialiased;
 }
 /* Copy & Lists */
 p {
   line-height: 1.5;
   margin-bottom: 1rem;
-  font-size: rem(20);
 }
 ul,
 ol {
@@ -53,7 +63,7 @@ h2 {
   margin-bottom: $space;
 }
 h3 {
-  font-size: rem(24);
+  font-size: rem(28);
   line-height: 1.5;
   margin-bottom: $space;
 }
@@ -63,18 +73,4 @@ h4 {
 h5 {
   font-size: rem(16);
   font-weight: 400;
-}
-
-.page-title {
-  padding-bottom: $space;
-
-  &:after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: rem(8);
-    margin-top: $space;
-    background-color: #ff73b4;
-  }
-
 }

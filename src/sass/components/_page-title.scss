@@ -1,0 +1,14 @@
+.page-title {
+  padding-top: $space * 2;
+  padding-bottom: $space;
+  margin-bottom: $space;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  &__separator {
+    width: 100px;
+    height: 10px;
+  }
+}

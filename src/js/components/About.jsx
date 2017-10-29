@@ -2,6 +2,14 @@ import React from 'react';
 
 const About = () => (
   <section className="section section--light about">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 10"
+      preserveAspectRatio="none"
+      className="section__separator--top"
+    >
+      <polygon points="100 0 100 10 0 10" />
+    </svg>
     <article className="section__container">
       <h3>
         Hi, my name is Miuki Miu (real name Elizabet) and I’m a UX/UI Designer & Developer living in Dublin, Ireland.

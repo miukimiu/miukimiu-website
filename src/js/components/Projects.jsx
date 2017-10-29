@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectLink from './common/ProjectLink';
+import PageTitle from './common/PageTitle';
 
 const Projects = () => (
   <section className="section section--light projects">
@@ -12,7 +13,7 @@ const Projects = () => (
       <path d="M0 100 C 20 0 50 0 100 100 Z" />
     </svg>
     <div className="section__container">
-      <h2>Projects</h2>
+      <PageTitle title="Projects" />
       <div className="projects__articles">
         <article className="projects__article">
           <h3>Cassette Tape</h3>

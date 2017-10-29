@@ -2,8 +2,8 @@ import React from 'react';
 import { KawaiiIceCream } from 'react-kawaii';
 import WorkItem from './common/WorkItem';
 import PageTitle from './common/PageTitle';
-import img1 from '../../images/work/iguide.png';
-import img2 from '../../images/work/newyou.png';
+import img1 from '../../images/work/iGuide@2x.png';
+import img2 from '../../images/work/worldlx@2x.png';
 
 const Work = () => (
   <section className="section section--light work">
@@ -25,14 +25,14 @@ const Work = () => (
         <div className="col-xs-12 col-sm-4">
           <WorkItem
             img={img1}
-            title="New you"
+            title="iGuide"
             tag="lorem ipsum"
           />
         </div>
         <div className="col-xs-12 col-sm-4">
           <WorkItem
             img={img2}
-            title="New you"
+            title="World LX"
             tag="lorem ipsum"
           />
         </div>
