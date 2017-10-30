@@ -1,5 +1,8 @@
+$work-bg: $white;
+
 .work {
-  background: $blue;
+  padding-bottom: $space * 4;
+  background: $work-bg;
 
   &__separator {
     position: absolute;
@@ -7,6 +10,14 @@
     left: 0;
     width: 100%;
     height: 50px;
-    fill: $blue;
+    fill: $work-bg;
+  }
+  &__item {
+    .title {
+      padding-top: $space;
+    }
+    .tag {
+      color: $grey;
+    }
   }
 }

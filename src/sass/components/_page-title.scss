@@ -1,0 +1,18 @@
+.page-title {
+  padding-top: $space * 2;
+  margin-bottom: $space * 3;
+
+  @include tablet-down {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  &__separator {
+    width: 100px;
+    height: 10px;
+    margin: auto;
+  }
+}

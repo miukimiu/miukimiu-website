@@ -1,0 +1,38 @@
+$articles-bg: $white;
+
+.articles {
+  padding-bottom: $space * 8;
+  background: $articles-bg;
+
+  @include tablet-down {
+    text-align: center;
+  }
+
+  &__separator {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    fill: $articles-bg;
+  }
+  &__item {
+    .title {
+      padding-top: $space;
+    }
+    .tag {
+      color: $grey;
+    }
+  }
+  .section__separator--top {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    fill: $articles-bg;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+}

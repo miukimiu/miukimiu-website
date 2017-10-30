@@ -1,5 +1,10 @@
 import React from 'react';
-import ProjectLink from './ProjectLink';
+import WorkItem from './common/WorkItem';
+import ProjectLink from './common/ProjectLink';
+import PageTitle from './common/PageTitle';
+
+import img1 from '../../images/work/cassette-tape@2x.png';
+import img2 from '../../images/work/react-kawaii@2x.png';
 
 const Projects = () => (
   <section className="section section--light projects">
@@ -12,25 +17,45 @@ const Projects = () => (
       <path d="M0 100 C 20 0 50 0 100 100 Z" />
     </svg>
     <div className="section__container">
-      <h2>Projects</h2>
-      <div className="projects__articles">
-        <article className="projects__article">
-          <h3>Cassette Tape</h3>
-          <p>A Chrome experiment that I presented at the Google I/0 Dublin in 2016. This project explores the web audio API.</p>
+      <div className="row">
+        <div className="col-xs-12">
+          <PageTitle title="Projects" />
+        </div>
+      </div>
+      <div className="row projects__item">
+        <div className="col-xs-12 col-sm-4">
+          <div className="thumb">
+            <img src={img1}></img>
+          </div>
+        </div>
+        <div className="col-xs-12 col-sm-8">
+          <article className="projects__article">
+            <h3>Cassette Tape</h3>
+            <p>A Chrome experiment that I presented at the Google I/0 Dublin in 2016. This project explores the web audio API.</p>
 
-          <ProjectLink
-            link="https://miukimiu.github.io/cassette-tape"
-            text="miukimiu.github.io/cassette-tape"
-          />
-        </article>
-        <article className="projects__article">
-          <h3>React Kawaii</h3>
-          <p>React Kawaii is a library of cute SVG illustrations (react components). Ideal to give some cuteness and personality to your react application.</p>
-          <ProjectLink
-            link="https://github.com/miukimiu/react-kawaii"
-            text="github.com/miukimiu/react-kawaii"
-          />
-        </article>
+            <ProjectLink
+              link="https://miukimiu.github.io/cassette-tape"
+              text="miukimiu.github.io/cassette-tape"
+            />
+          </article>
+        </div>
+      </div>
+      <div className="row projects__item">
+        <div className="col-xs-12 col-sm-4">
+          <div className="thumb">
+            <img src={img2}></img>
+          </div>
+        </div>
+        <div className="col-xs-12 col-sm-8">
+          <article className="projects__article">
+            <h3>React Kawaii</h3>
+            <p>React Kawaii is a library of cute SVG illustrations (react components). Ideal to give some cuteness and personality to your react application.</p>
+            <ProjectLink
+              link="https://github.com/miukimiu/react-kawaii"
+              text="github.com/miukimiu/react-kawaii"
+            />
+          </article>
+        </div>
       </div>
     </div>
   </section>

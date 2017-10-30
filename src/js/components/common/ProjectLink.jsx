@@ -1,5 +1,5 @@
 import React from 'react';
-import iconLink from '../../images/icons/link.svg';
+import iconLink from '../../../images/icons/link.svg';
 
 const ProjectLink = props => (
   <a href={props.link} className="project-link">
