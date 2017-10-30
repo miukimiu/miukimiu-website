@@ -3,7 +3,11 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 0 ($space * 2);
+  padding: 0 $space;
+
+  @include tablet-up {
+    padding: 0 ($space * 2);
+  }
 
   &__separator {
     position: absolute;

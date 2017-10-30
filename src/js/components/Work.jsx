@@ -4,6 +4,7 @@ import WorkItem from './common/WorkItem';
 import PageTitle from './common/PageTitle';
 import img1 from '../../images/work/iGuide@2x.png';
 import img2 from '../../images/work/worldlx@2x.png';
+import img3 from '../../images/work/charts@2x.png';
 
 const Work = () => (
   <section className="section section--light work">
@@ -38,8 +39,8 @@ const Work = () => (
         </div>
         <div className="col-xs-12 col-sm-4">
           <WorkItem
-            img={img1}
-            title="New you"
+            img={img3}
+            title="Charts"
             tag="lorem ipsum"
           />
         </div>

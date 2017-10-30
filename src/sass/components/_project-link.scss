@@ -2,16 +2,17 @@
   text-decoration: none;
   color: $blue;
   display: inline-flex;
-  align-items: center;
   margin-top: $space;
   transition: all 1s linear;
 
   &__img {
     fill: $blue;
-    padding-right: $space / 4;
+    padding-right: $space / 3;
+    margin-top: 3px;
   }
   &__text {
     position: relative;
+    line-height: 1.5;
 
     &:before {
       content: "";

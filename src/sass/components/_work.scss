@@ -1,4 +1,4 @@
-$work-bg: $light-grey;
+$work-bg: $white;
 
 .work {
   padding-bottom: $space * 4;
@@ -13,24 +13,6 @@ $work-bg: $light-grey;
     fill: $work-bg;
   }
   &__item {
-    .thumb {
-      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
-      border-radius: 10px;
-
-      img {
-        cursor: pointer;
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        transition: ease all 0.2s;
-
-        &:hover {
-          transform: scale(1.1);
-          box-shadow: 0 20px 80px rgba(0, 0, 0, 0.1);
-        }
-      }
-    }
     .title {
       padding-top: $space;
     }
