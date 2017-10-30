@@ -7,12 +7,16 @@
 
   &__img {
     fill: $blue;
-    padding-right: $space / 3;
+    padding-right: $space / 2;
     margin-top: 3px;
   }
   &__text {
     position: relative;
     line-height: 1.5;
+
+    @include tablet-down {
+      text-align: left;
+    }
 
     &:before {
       content: "";

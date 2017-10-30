@@ -3,12 +3,12 @@ import React from 'react';
 const About = () => (
   <section className="section section--light about">
     <svg
-      className="section__separator--top"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 100 100"
+      viewBox="0 0 829 60"
       preserveAspectRatio="none"
+      className="section__separator--top"
     >
-      <path d="M0 100 C 20 0 50 0 100 100 Z" />
+      <path fill="#FFF" fill-rule="evenodd" d="M0,23.9290015 C206.010417,8.05185466 366.010417,0.11328125 480,0.11328125 C593.989583,0.11328125 710.322917,8.05185466 829,23.9290015 L829,60 L0,60 L0,23.9290015 Z"/>
     </svg>
     <article className="section__container">
       <h3>
