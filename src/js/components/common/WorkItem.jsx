@@ -2,9 +2,9 @@ import React from 'react';
 
 const WorkItem = props => (
   <div className="work__item">
-    <div className="thumb">
+    <a className="thumb" href={props.link}>
       <img src={props.img}></img>
-    </div>
+    </a>
     <h4 className="title">{props.title}</h4>
     <h5 className="tag">{props.tag}</h5>
   </div>

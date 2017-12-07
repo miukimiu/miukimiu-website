@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import { TweenLite } from 'gsap';
+import React from 'react';
 import Welcome from '../components/Welcome';
 import About from '../components/About';
 import Projects from '../components/Projects';
-import Work from '../components/Work';
 import Articles from '../components/Articles';
-
+import Talks from '../components/Talks';
 
 const App = () => (
   <div className="app">
@@ -13,6 +11,7 @@ const App = () => (
     <About />
     <Projects />
     <Articles />
+    <Talks />
   </div>
 )
 

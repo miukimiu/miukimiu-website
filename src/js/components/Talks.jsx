@@ -1,4 +1,5 @@
 import React from 'react';
+import WorkItem from './common/WorkItem';
 import ProjectLink from './common/ProjectLink';
 import PageTitle from './common/PageTitle';
 
@@ -18,7 +19,7 @@ const Projects = () => (
     <div className="section__container">
       <div className="row">
         <div className="col-xs-12">
-          <PageTitle title="Projects" />
+          <PageTitle title="Talks" />
         </div>
       </div>
       <div className="row projects__item">

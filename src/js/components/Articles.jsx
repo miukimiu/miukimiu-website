@@ -23,7 +23,7 @@ const Articles = () => (
       </h3>
       <ProjectLink
         link="https://blog.prototypr.io/svg-illustrations-as-react-components-f0e7be304eb6"
-        text="blog.prototypr.io/svg-illustration..."
+        text="blog.prototypr.io/svg-illustrations-as-react-components"
       />
     </article>
   </section>

@@ -19,11 +19,12 @@ $projects-bg: $light-grey;
       padding-bottom: $space * 4;
     }
     .thumb {
+      display: block;
       margin: 0 auto;
       margin-bottom: $space;
 
       @include tablet-down() {
-          max-width: 250px;
+          max-width: 400px;
       }
     }
 
