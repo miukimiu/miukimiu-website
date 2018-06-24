@@ -1,0 +1,23 @@
+.welcome {
+  display: flex;
+  background: $purple;
+  flex-direction: column;
+
+  &.section {
+    padding: ($space * 4) $space ($space * 6);
+  }
+
+  &__planet {
+    display: inline-flex;
+  }
+  .kawaiiElementWrapper {
+    margin: 0 auto;
+  }
+  .section__separator {
+    fill: $white;
+  }
+  &__logo {
+    max-width: 390px;
+    width: 100%;
+  }
+}
