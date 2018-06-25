@@ -29,11 +29,11 @@ const About = () => (
         staying on the bleeding edge. I have a passion for creating, and
         discovering, new and effective digital experiences. My friends say that
         I'm a geek, but I like to say that I'm a friendly geek. I like to
-        travel, making music and create open source projects.
+        travel, make music and create open source projects.
       </p>
       <p>
-        I'm currently employed at Showtime Analytics working on UI Design, Data
-        Visualisation and developing our Design System.
+        I'm currently employed at UnitedHealth Group, working on UX Design and
+        Data Visualisation.
       </p>
     </article>
   </section>
