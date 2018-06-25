@@ -6,7 +6,7 @@ import PageTitle from "./common/PageTitle";
 import img1 from "../assets/images/work/cassette-tape@2x.png";
 import img2 from "../assets/images/work/react-kawaii@2x.png";
 
-const Projects = () => (
+const Awards = () => (
   <section className="section section--light projects">
     <svg
       className="projects__separator"
@@ -19,7 +19,7 @@ const Projects = () => (
     <div className="section__container">
       <div className="row">
         <div className="col-xs-12">
-          <PageTitle title="Talks" />
+          <PageTitle title="Awards" />
         </div>
       </div>
       <div className="row projects__item">
@@ -30,7 +30,7 @@ const Projects = () => (
         </div>
         <div className="col-xs-12 col-sm-8">
           <article className="projects__article">
-            <h3>Cassette Tape</h3>
+            <h3>Fun Side Project of the Year</h3>
             <p>
               A Chrome experiment that I presented at the Google I/0 Dublin in
               2016. This project explores the web audio API.
@@ -43,29 +43,8 @@ const Projects = () => (
           </article>
         </div>
       </div>
-      <div className="row projects__item">
-        <div className="col-xs-12 col-sm-4">
-          <a className="thumb" href="https://github.com/miukimiu/react-kawaii">
-            <img src={img2} />
-          </a>
-        </div>
-        <div className="col-xs-12 col-sm-8">
-          <article className="projects__article">
-            <h3>React Kawaii</h3>
-            <p>
-              React Kawaii is a library of cute SVG illustrations (react
-              components). Ideal to give some cuteness and personality to your
-              react application.
-            </p>
-            <ProjectLink
-              link="https://github.com/miukimiu/react-kawaii"
-              text="github.com/miukimiu/react-kawaii"
-            />
-          </article>
-        </div>
-      </div>
     </div>
   </section>
 );
 
-export default Projects;
+export default Awards;
