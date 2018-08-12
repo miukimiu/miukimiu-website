@@ -7,3 +7,4 @@ test/bower_components
 .sass-cache
 .publish
 build
+.DS_store

@@ -3,8 +3,7 @@ import WorkItem from "./common/WorkItem";
 import ProjectLink from "./common/ProjectLink";
 import PageTitle from "./common/PageTitle";
 
-import img1 from "../assets/images/work/cassette-tape@2x.png";
-import img2 from "../assets/images/work/react-kawaii@2x.png";
+import img1 from "../assets/images/awards/award.png";
 
 const Awards = () => (
   <section className="section section--light projects">
@@ -24,7 +23,10 @@ const Awards = () => (
       </div>
       <div className="row projects__item">
         <div className="col-xs-12 col-sm-4">
-          <a className="thumb" href="https://miukimiu.github.io/cassette-tape">
+          <a
+            className="thumb"
+            href="https://www.youtube.com/watch?v=7-qDVeAOTmc"
+          >
             <img src={img1} />
           </a>
         </div>
@@ -32,13 +34,14 @@ const Awards = () => (
           <article className="projects__article">
             <h3>Fun Side Project of the Year</h3>
             <p>
-              A Chrome experiment that I presented at the Google I/0 Dublin in
-              2016. This project explores the web audio API.
+              On April 2018, my open source project React Kawaii won the award
+              for Fun Side Project of the Year during the React Amsterdam
+              Conference!
             </p>
 
             <ProjectLink
-              link="https://miukimiu.github.io/cassette-tape"
-              text="miukimiu.github.io/cassette-tape"
+              link="https://www.youtube.com/watch?v=7-qDVeAOTmc"
+              text="React Open Source Awards 2018"
             />
           </article>
         </div>

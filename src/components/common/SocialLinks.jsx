@@ -1,20 +1,13 @@
-import React from 'react';
-import codepenImg from '../../assets/images/social-icons/codepen.svg';
-import dribbbleImg from '../../assets/images/social-icons/dribbble.svg';
-import githubImg from '../../assets/images/social-icons/github.svg';
-import linkedinImg from '../../assets/images/social-icons/linkedin.svg';
-import mediumImg from '../../assets/images/social-icons/medium.svg';
-import twitterImg from '../../assets/images/social-icons/twitter.svg';
+import React from "react";
+import codepenImg from "../../assets/images/social-icons/codepen.svg";
+import dribbbleImg from "../../assets/images/social-icons/dribbble.svg";
+import githubImg from "../../assets/images/social-icons/github.svg";
+import linkedinImg from "../../assets/images/social-icons/linkedin.svg";
+import mediumImg from "../../assets/images/social-icons/medium.svg";
+import twitterImg from "../../assets/images/social-icons/twitter.svg";
 
 const SocialLinks = () => (
   <section className="social-links">
-
-    <a href="https://codepen.io/miukimiu">
-      <img alt="" src={codepenImg} />
-    </a>
-    <a href="https://dribbble.com/miukimiu">
-      <img alt="" src={dribbbleImg} />
-    </a>
     <a href="https://github.com/miukimiu">
       <img alt="" src={githubImg} />
     </a>
@@ -26,6 +19,9 @@ const SocialLinks = () => (
     </a>
     <a href="https://twitter.com/miuki_miu">
       <img alt="" src={twitterImg} />
+    </a>
+    <a href="https://dribbble.com/miukimiu">
+      <img alt="" src={dribbbleImg} />
     </a>
   </section>
 );
