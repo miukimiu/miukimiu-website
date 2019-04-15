@@ -1,37 +1,32 @@
 import React from "react";
-import WorkItem from "./common/WorkItem";
+import { Row, Col } from "react-flexbox-grid";
 import ProjectLink from "./common/ProjectLink";
 import PageTitle from "./common/PageTitle";
-
 import img1 from "../assets/images/awards/award.png";
+import styled from "styled-components";
+import Separator from "./common/Separator";
+import { Section, Thumb, Article, Inner } from "./common/Elements.styled";
 
 const Awards = () => (
-  <section className="section section--light projects">
-    <svg
-      className="projects__separator"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="none"
-    >
-      <path d="M0 100 C 20 0 50 0 100 100 Z" />
-    </svg>
-    <div className="section__container">
-      <div className="row">
-        <div className="col-xs-12">
+  <Section color="#f4f5f9">
+    <Separator color="#f4f5f9" />
+    <Inner>
+      <Row className="row">
+        <Col xs={12}>
           <PageTitle title="Awards" />
-        </div>
-      </div>
-      <div className="row projects__item">
-        <div className="col-xs-12 col-sm-4">
-          <a
+        </Col>
+      </Row>
+      <Row className="item">
+        <Col xs={12} sm={4}>
+          <Thumb
             className="thumb"
             href="https://www.youtube.com/watch?v=7-qDVeAOTmc"
           >
             <img src={img1} />
-          </a>
-        </div>
-        <div className="col-xs-12 col-sm-8">
-          <article className="projects__article">
+          </Thumb>
+        </Col>
+        <Col xs={12} sm={8}>
+          <Article>
             <h3>Fun Side Project of the Year</h3>
             <p>
               On April 2018, my open source project React Kawaii won the award
@@ -43,11 +38,11 @@ const Awards = () => (
               link="https://www.youtube.com/watch?v=7-qDVeAOTmc"
               text="React Open Source Awards 2018"
             />
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
+          </Article>
+        </Col>
+      </Row>
+    </Inner>
+  </Section>
 );
 
 export default Awards;

@@ -1,8 +1,7 @@
 import React from "react";
-import { KawaiiIceCream } from "react-kawaii";
 import WorkItem from "./common/WorkItem";
 import PageTitle from "./common/PageTitle";
-import img1 from "../assets/images/work/iGuide.png";
+import img1 from "../assets/images/work/iGuide@2x.png";
 import img2 from "../assets/images/work/worldlx.png";
 import img3 from "../assets/images/work/charts.png";
 

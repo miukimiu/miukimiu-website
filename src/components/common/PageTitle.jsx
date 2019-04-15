@@ -1,12 +1,21 @@
-import React from 'react';
-import separator from '../../assets/images/page-title/page-title-separator.svg';
+import React from "react";
+import styled from "styled-components";
+import separator from "../../assets/images/page-title/page-title-separator.svg";
+
+const PageTitleEl = styled.div`
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: ${props => props.theme.tablet}) {
+    text-align: center;
+    justify-content: center;
+  }
+`;
 
 const PageTitle = props => (
-  <div className="page-title">
+  <PageTitleEl>
     <h2>{props.title}</h2>
     <img className="page-title__separator" src={separator} alt="" />
-  </div>
-
+  </PageTitleEl>
 );
 
 export default PageTitle;
