@@ -55,13 +55,18 @@ class HeaderComp extends React.Component {
   render() {
     const { active } = this.state;
 
-    const { theme, children } = this.props;
+    const { theme, children, scrollToComponent } = this.props;
 
     return (
       <HeaderEl active={active}>
         <Inner>
           <div>
-            <svg width="40" height="40" viewBox="0 0 40 40">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              onClick={scrollToComponent}
+            >
               <g fill="none" fillRule="evenodd">
                 <rect
                   fill={active === "in-viewport" ? "#08061D" : theme.darkBlue}
