@@ -1,42 +1,50 @@
 import React from "react";
+import { Row, Col } from "react-flexbox-grid";
+import styled from "styled-components";
+import Emojify from "react-emojione";
+import Separator from "./common/Separator";
+import { Section, Inner, Article } from "./common/Elements.styled";
 
 const About = () => (
-  <section className="section section--light about">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 829 60"
-      preserveAspectRatio="none"
-      className="section__separator--top"
-    >
-      <path
-        fill="#FFF"
-        fillRule="evenodd"
-        d="M0,23.9290015 C206.010417,8.05185466 366.010417,0.11328125 480,0.11328125 C593.989583,0.11328125 710.322917,8.05185466 829,23.9290015 L829,60 L0,60 L0,23.9290015 Z"
-      />
-    </svg>
-    <article className="section__container">
-      <h3>
-        Hi, my name is Miuki Miu (real name Elizabet) and I’m a UX/UI Designer &
-        Developer living in Dublin, Ireland.
-      </h3>
-      <p>
-        I’m friendly and eager to work and learn with others. Each position I
-        have held has broadened my skill set and career goals towards
-        forward-thinking technology.
-      </p>
-      <p>
-        I am obsessed with expanding my craft, solving challenging problems and
-        staying on the bleeding edge. I have a passion for creating, and
-        discovering, new and effective digital experiences. My friends say that
-        I'm a geek, but I like to say that I'm a friendly geek. I like to
-        travel, make music and create open source projects.
-      </p>
-      <p>
-        I'm currently employed at UnitedHealth Group, working on UX Design and
-        Data Visualisation.
-      </p>
-    </article>
-  </section>
+  <Section color="white">
+    <Separator />
+    <Inner>
+      <Article className="about">
+        <h2>
+          Hello there!
+          <Emojify>👋</Emojify>
+        </h2>
+        <p>
+          My name is Miuki Miu (real name Elizabet <Emojify>🙃</Emojify>). I'm a
+          designer who codes or probably a developer who loves to design!
+        </p>
+        <p>
+          I started my career as a web developer and soon I realized that I like
+          to be in the more visual aspects of the web. I love interaction
+          design, front-end technologies, animations and I'm obsessed with
+          making the web fun again!
+        </p>
+        <p>
+          I love open source technologies and in April 2018, my project React
+          Kawaii won the award "Fun Project of the Year" at React Amsterdam.
+        </p>
+        <p>
+          I also love music and I was the first female solo hip-hop artist
+          signing with a major label in Portugal, Universal Music. My music
+          reached the top positions of the Portuguese MTV charts, but soon I
+          realized that I was not meant to be an artist!
+        </p>
+        <p>
+          I found out that I'm much happier doing code, design and sometimes
+          giving some talks around the world!
+        </p>
+        <p>
+          I'm currently employed at UnitedHealth Group, working on UX Design and
+          Front-end development.
+        </p>
+      </Article>
+    </Inner>
+  </Section>
 );
 
 export default About;
