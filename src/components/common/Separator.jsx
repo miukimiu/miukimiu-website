@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 export const SeparatorSvg = styled.svg`
   position: absolute;
-  top: -50px;
+  top: -48px;
   left: 0;
   width: 100%;
   height: 50px;
@@ -16,6 +16,7 @@ const Separator = ({ color }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 829 60"
     preserveAspectRatio="none"
+    fill={color}
   >
     <path
       fill={color}

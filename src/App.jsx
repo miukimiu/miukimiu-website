@@ -70,19 +70,6 @@ class App extends React.Component {
             <li>
               <button
                 onClick={() =>
-                  scrollToComponent(this.Articles, {
-                    offset: 0,
-                    align: "top",
-                    duration: 1500
-                  })
-                }
-              >
-                Articles
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() =>
                   scrollToComponent(this.Awards, {
                     offset: 0,
                     align: "top",
@@ -91,6 +78,19 @@ class App extends React.Component {
                 }
               >
                 Awards
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() =>
+                  scrollToComponent(this.Articles, {
+                    offset: 0,
+                    align: "top",
+                    duration: 1500
+                  })
+                }
+              >
+                Articles
               </button>
             </li>
           </ul>

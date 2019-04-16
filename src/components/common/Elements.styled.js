@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { lighten } from "polished";
 
 export const Section = styled.div`
   padding: 3rem 0 6rem;
@@ -118,4 +119,8 @@ export const HeaderEl = styled.div`
       }
     }
   }
+`;
+
+export const Subtitle = styled.h3`
+  color: ${props => lighten(0.2, props.theme.darkGray)};
 `;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PageTitle from "./common/PageTitle";
 import CardEvent from "./common/CardEvent";
 import Separator from "./common/Separator";
-import { Section, Inner } from "./common/Elements.styled";
+import { Section, Inner, Subtitle } from "./common/Elements.styled";
 import photo from "../assets/images/photos/Elizabet_Oliveira.jpg";
 
 const Photo = styled.div`
@@ -26,6 +26,7 @@ const Talks = () => (
         <Col xs={12}>
           <Row>
             <Col xs={12} lg={8}>
+              <Subtitle>Upcoming</Subtitle>
               <Row>
                 <Col xs={12} sm={6}>
                   <CardEvent
@@ -43,9 +44,12 @@ const Talks = () => (
                     location="Sofia, Bulgaria"
                   />
                 </Col>
+              </Row>
+              <Subtitle>Past</Subtitle>
+              <Row>
                 <Col xs={12} sm={6}>
                   <CardEvent
-                    title="React Amsterdam"
+                    title="React Amsterdam 2019"
                     talk="An SVG's tale"
                     date="April 10-12, 2019"
                     location="Amsterdam"
@@ -54,7 +58,7 @@ const Talks = () => (
                 </Col>
                 <Col xs={12} sm={6}>
                   <CardEvent
-                    title="Typeof Conf"
+                    title="Typeof Conf 2019"
                     talk="SVG Illustrations as Components"
                     date="March 28 & 29, 2019"
                     location="Oporto, Portugal"
