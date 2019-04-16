@@ -123,4 +123,8 @@ export const HeaderEl = styled.div`
 
 export const Subtitle = styled.h3`
   color: ${props => lighten(0.2, props.theme.darkGray)};
+
+  @media screen and (max-width: ${props => props.theme.tablet}) {
+    text-align: center;
+  }
 `;
