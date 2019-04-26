@@ -33,7 +33,7 @@ const Talks = () => (
                     title="React Conf Armenia"
                     talk="An SVG's tale"
                     date="May 25, 2019"
-                    location="Sofia, Bulgaria"
+                    location="Yerevan, Armenia"
                   />
                 </Col>
                 <Col xs={12} sm={6}>
@@ -52,7 +52,7 @@ const Talks = () => (
                     title="React Amsterdam 2019"
                     talk="An SVG's tale"
                     date="April 10-12, 2019"
-                    location="Amsterdam"
+                    location="Amsterdam, Netherlands"
                     youtube="https://youtu.be/4KfAS3zrvX8?t=21112"
                   />
                 </Col>
@@ -77,7 +77,7 @@ const Talks = () => (
                     title="React Conf 2018"
                     talk="SVG Illustrations as Components"
                     date="October 25 & 26"
-                    location="Las Vegas"
+                    location="Las Vegas, USA"
                     youtube="https://youtu.be/1gG8rtm-rq4"
                   />
                 </Col>
