@@ -45,7 +45,7 @@ const ProjectLinkEl = styled.a`
 `;
 
 const ProjectLink = props => (
-  <ProjectLinkEl href={props.link}>
+  <ProjectLinkEl href={props.link} target="_blank">
     <FiLink2 />
     <span className="text">{props.text}</span>
   </ProjectLinkEl>

@@ -19,7 +19,10 @@ const Projects = () => (
       </Row>
       <Row className="item">
         <Col xs={12} sm={4}>
-          <Thumb href="https://miukimiu.github.io/cassette-tape">
+          <Thumb
+            href="https://miukimiu.github.io/cassette-tape"
+            target="_blank"
+          >
             <img src={img1} />
           </Thumb>
         </Col>
@@ -40,8 +43,8 @@ const Projects = () => (
       <Row className="row item">
         <Col xs={12} sm={4}>
           <Thumb
-            className="thumb"
             href="https://github.com/miukimiu/react-kawaii"
+            target="_blank"
           >
             <img src={img2} />
           </Thumb>
@@ -63,7 +66,7 @@ const Projects = () => (
       </Row>
       <Row className="item">
         <Col xs={12} sm={4}>
-          <Thumb href="https://www.soundtracktor.com/">
+          <Thumb href="https://www.soundtracktor.com/" target="_blank">
             <img src={img3} />
           </Thumb>
         </Col>
