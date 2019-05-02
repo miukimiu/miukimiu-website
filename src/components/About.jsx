@@ -40,7 +40,8 @@ const About = () => (
         </p>
         <p>
           I'm currently employed at UnitedHealth Group, working on UX Design and
-          Front-end development.
+          Front-end development. In my free time, I'm probably working in one of
+          my projects!
         </p>
       </Article>
     </Inner>
