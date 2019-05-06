@@ -61,7 +61,7 @@ const Talks = () => (
                     talk="An SVG's tale"
                     date="April 10-12, 2019"
                     location="Amsterdam, Netherlands"
-                    youtube="https://youtu.be/4KfAS3zrvX8?t=21112"
+                    youtube="https://youtu.be/BISiYX5s_Qw"
                   />
                 </Col>
                 <Col xs={12} sm={6}>
