@@ -30,23 +30,39 @@ const Talks = () => (
               <Row>
                 <Col xs={12} sm={6}>
                   <CardEvent
-                    title="JNAtion"
-                    talk="An SVG's tale"
-                    date="June 4, 2019"
-                    location="Coimbra, Portugal"
-                  />
-                </Col>
-                <Col xs={12} sm={6}>
-                  <CardEvent
                     title="Intersection Conference"
                     talk="An SVG's tale"
                     date="October 1 & 2, 2019"
                     location="Milan, Italy"
                   />
                 </Col>
+                <Col xs={12} sm={6}>
+                  <CardEvent
+                    title="React Live"
+                    talk="To announce"
+                    date="September 13, 2019"
+                    location="Amsterdam, Netherlands"
+                  />
+                </Col>
+                <Col xs={12} sm={6}>
+                  <CardEvent
+                    title="React Day Berlin"
+                    talk="To announce"
+                    date="December 6, 2019"
+                    location="Berlin, Germany"
+                  />
+                </Col>
               </Row>
               <Subtitle>Past</Subtitle>
               <Row>
+                <Col xs={12} sm={6}>
+                  <CardEvent
+                    title="JNation"
+                    talk="An SVG's tale"
+                    date="June 4, 2019"
+                    location="Coimbra, Portugal"
+                  />
+                </Col>
                 <Col xs={12} sm={6}>
                   <CardEvent
                     title="React Conf Armenia"
@@ -55,7 +71,7 @@ const Talks = () => (
                     location="Yerevan, Armenia"
                   />
                 </Col>
-                 <Col xs={12} sm={6}>
+                <Col xs={12} sm={6}>
                   <CardEvent
                     title="React Not A Conf"
                     talk="An SVG's tale"
@@ -77,7 +93,7 @@ const Talks = () => (
                     title="Typeof Conf 2019"
                     talk="SVG Illustrations as Components"
                     date="March 28 & 29, 2019"
-                    location="Oporto, Portugal"
+                    location="Porto, Portugal"
                   />
                 </Col>
                 <Col xs={12} sm={6}>
