@@ -9,6 +9,7 @@ const WelcomeSection = styled.section`
   background: ${props => props.theme.purple};
   flex-direction: column;
   padding: 4rem 1rem 6rem;
+  max-height: 560px;
 
   .kawaiiElementWrapper {
     margin: 0 auto;
