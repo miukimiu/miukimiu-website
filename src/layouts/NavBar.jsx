@@ -48,12 +48,14 @@ const Nav = styled.nav`
 const NavBar = () => (
   <StyledHeadroom calcHeightOnResize disableInlineStyles>
     <StyledLink to="/">
-      <img src={logo} alt="Soundtracktor Logo" />
+      {/* <img src={logo} alt="Example Logo" /> */}
+      Vega
     </StyledLink>
     <Nav>
-      <Link to="/">Blog</Link>
-      {/* <Link to="/blog">Blog</Link>
-      <Link to="/about">About</Link> */}
+      <Link to="/">Home</Link>
+      <Link to="/about">About</Link>
+      <Link to="/blog">Blog</Link>
+      <Link to="/events">Events</Link>
     </Nav>
   </StyledHeadroom>
 );

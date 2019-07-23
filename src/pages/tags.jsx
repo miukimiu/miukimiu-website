@@ -8,7 +8,7 @@ const Tags = ({ pageContext }) => {
 
   return (
     <Layout>
-      <Header title="Tags Page">Soundtracktor</Header>
+      <Header title="Tags Page">Tags Page</Header>
       <Container>
         <TagsBlock list={tags} />
       </Container>

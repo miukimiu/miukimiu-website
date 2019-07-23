@@ -30,7 +30,7 @@ const Footer = () => (
   <Wrapper>
     <Text>
       <span>
-        <a href="https://soundtracktor.com">Soundtracktor</a>
+        <a href="https://Example.com">Example</a>
       </span>
     </Text>
   </Wrapper>

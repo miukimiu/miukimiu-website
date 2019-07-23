@@ -27,7 +27,7 @@ const Index = ({ data }) => {
     <Layout>
       <Helmet title={'Home Page'} />
       <Header title="Home Page">logo</Header>
-      <PostWrapper>
+      {/* <PostWrapper>
         {edges.map(({ node }) => (
           <PostList
             key={node.id}
@@ -38,7 +38,7 @@ const Index = ({ data }) => {
             excerpt={node.excerpt}
           />
         ))}
-      </PostWrapper>
+      </PostWrapper> */}
     </Layout>
   );
 };
