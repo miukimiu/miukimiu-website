@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-import kebabCase from 'lodash/kebabCase'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import kebabCase from 'lodash/kebabCase';
 
-import Subline from './Subline'
+import Subline from './Subline';
 
 const Post = styled.article`
   display: flex;
@@ -16,7 +16,7 @@ const Post = styled.article`
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-`
+`;
 
 const Title = styled.h2`
   position: relative;
@@ -28,7 +28,7 @@ const Title = styled.h2`
       color: ${props => props.theme.colors.primaryLight};
     }
   }
-`
+`;
 
 const Initiale = styled.span`
   position: absolute;
@@ -37,16 +37,16 @@ const Initiale = styled.span`
   opacity: 0.08;
   user-select: none;
   z-index: -1;
-`
+`;
 
 const Excerpt = styled.p`
   grid-column: -1 / 1;
   margin-top: 1rem;
   margin-bottom: 1rem;
-`
+`;
 
 const Article = ({ title, date, excerpt, slug, timeToRead, categories }) => {
-  const firstChar = title.charAt(0)
+  const firstChar = title.charAt(0);
 
   return (
     <Post>
@@ -65,10 +65,10 @@ const Article = ({ title, date, excerpt, slug, timeToRead, categories }) => {
       </Subline>
       <Excerpt>{excerpt}</Excerpt>
     </Post>
-  )
-}
+  );
+};
 
-export default Article
+export default Article;
 
 Article.propTypes = {
   title: PropTypes.string.isRequired,
@@ -76,5 +76,5 @@ Article.propTypes = {
   excerpt: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   timeToRead: PropTypes.number.isRequired,
-  categories: PropTypes.array.isRequired,
-}
+  categories: PropTypes.array.isRequired
+};

@@ -1,10 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
-
-import SEO from './SEO';
-import theme from '../../config/theme';
-import useBuildTime from '../hooks/useBuildTime';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import tw from "tailwind.macro";
+import SEO from "./SEO";
+import theme from "../../config/theme";
+import useBuildTime from "../hooks/useBuildTime";
+import Nav from "./Nav";
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -184,42 +185,64 @@ const GlobalStyle = createGlobalStyle`
   [hidden] {
     display: none !important;
   }
-`
+`;
+
+// const Footer = styled.footer`
+//   text-align: center;
+//   padding: 3rem 1rem;
+//   span {
+//     font-size: 0.75rem;
+//   }
+// `
 
 const Footer = styled.footer`
-  text-align: center;
-  padding: 3rem 1rem;
-  span {
-    font-size: 0.75rem;
-  }
-`
+  ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
+`;
 
-const Layout = ({ children, customSEO }) => {
-  const buildTime = useBuildTime()
+const Layout = ({ children, customSEO, noFooter }) => {
+  const buildTime = useBuildTime();
+
+  const [isMobileNavFolded, setMobileNavFolded] = useState(true);
+
+  const toggleMobileNav = () => {
+    setMobileNavFolded(!isMobileNavFolded);
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <>
         {!customSEO && <SEO buildTime={buildTime} />}
         <GlobalStyle />
+        <Nav
+          isMobileNavFolded={isMobileNavFolded}
+          onMobileNavToggle={toggleMobileNav}
+        />
         {children}
-        <Footer>
-          &copy; 2019 by LekoArts. All rights reserved. <br />
-          <a href="https://github.com/LekoArts/gatsby-starter-minimal-blog">GitHub Repository</a> <br />
-          <span>Last build: {buildTime}</span>
-        </Footer>
+
+        {!noFooter && (
+          <Footer>
+            &copy; 2019 by Miukimiu. All rights reserved. <br />
+            <a href="https://github.com/miukimiu/miukimiu-website/">
+              GitHub Repository
+            </a>{" "}
+            <br />
+            <span>Last build: {buildTime}</span>
+          </Footer>
+        )}
       </>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
   customSEO: PropTypes.bool,
-}
+  noFooter: PropTypes.bool
+};
 
 Layout.defaultProps = {
   customSEO: false,
-}
+  noFooter: false
+};

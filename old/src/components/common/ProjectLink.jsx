@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { FiLink2 } from "react-icons/fi";
-import iconLink from "../../assets/images/icons/link.svg";
+import React from 'react';
+import styled from 'styled-components';
+import { FiLink2 } from 'react-icons/fi';
+import iconLink from '../../assets/images/icons/link.svg';
 
 const ProjectLinkEl = styled.a`
   text-decoration: none;

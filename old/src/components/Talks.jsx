@@ -1,11 +1,11 @@
-import React from "react";
-import { Row, Col } from "react-flexbox-grid";
-import styled from "styled-components";
-import PageTitle from "./common/PageTitle";
-import CardEvent from "./common/CardEvent";
-import Separator from "./common/Separator";
-import { Section, Inner, Subtitle } from "./common/Elements.styled";
-import photo from "../assets/images/photos/Elizabet_Oliveira.jpg";
+import React from 'react';
+import { Row, Col } from 'react-flexbox-grid';
+import styled from 'styled-components';
+import PageTitle from './common/PageTitle';
+import CardEvent from './common/CardEvent';
+import Separator from './common/Separator';
+import { Section, Inner, Subtitle } from './common/Elements.styled';
+import photo from '../assets/images/photos/Elizabet_Oliveira.jpg';
 
 const Photo = styled.div`
   img {
