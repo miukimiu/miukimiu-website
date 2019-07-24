@@ -1,14 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
-
-import NavSeparator from './NavSeparator'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import NavSeparator from './NavSeparator';
 
 const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   flex: 0 0 auto;
-`
+`;
 
 const NavLink = styled(Link)`
   flex: 0 0 auto;
@@ -26,17 +25,18 @@ const NavLink = styled(Link)`
     transform: scale(0.95);
     opacity: 0.6;
   }
-`
+`;
 
-const NavLinks = () =>
+const NavLinks = () => (
   <Wrapper>
     <NavLink to="/">Home</NavLink>
     <NavSeparator />
-    <NavLink to="page-2">Page 2</NavLink>
+    <NavLink to="/about">About</NavLink>
     <NavSeparator />
-    <NavLink to="page-3">Page 3</NavLink>
+    <NavLink to="/blog">Blog</NavLink>
     <NavSeparator />
-    <NavLink to="page-4">Page 4</NavLink>
+    <NavLink to="/talks">Talks</NavLink>
   </Wrapper>
+);
 
-export default NavLinks
+export default NavLinks;

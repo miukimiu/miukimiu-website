@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {
+  TiSocialDribbble,
+  TiSocialGithub,
+  TiSocialTwitter
+} from 'react-icons/ti';
 import rem from '../../utils/rem';
 import { navbarHeight } from '../../utils/sizes';
 
@@ -36,11 +40,18 @@ const SocialLink = styled.a`
   }
 `;
 
-export default () => (
+const Social = () => (
   <Wrapper>
-    <SocialLink href="https://www.github.com/arsmth">
-      {/* <FontAwesomeIcon icon={faGithub} /> */}
-      Icon
+    <SocialLink href="https://www.github.com/miukimiu">
+      <TiSocialDribbble />
+    </SocialLink>
+    <SocialLink href="https://www.github.com/miukimiu">
+      <TiSocialGithub />
+    </SocialLink>
+    <SocialLink href="https://www.github.com/miukimiu">
+      <TiSocialTwitter />
     </SocialLink>
   </Wrapper>
 );
+
+export default Social;

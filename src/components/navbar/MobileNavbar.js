@@ -1,13 +1,14 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled, { css } from "styled-components";
-import rem from "../../utils/rem";
-import { navbarHeight } from "../../utils/sizes";
-import { mobile } from "../../utils/media";
-import NavLinks from "./NavLinks";
-import Social from "./Social";
-import NavSeparator from "./NavSeparator";
-import NavButton from "./NavButton";
+import React from 'react';
+import { Link } from 'gatsby';
+import styled, { css } from 'styled-components';
+import { FiMenu } from 'react-icons/fi';
+import rem from '../../utils/rem';
+import { navbarHeight } from '../../utils/sizes';
+import { mobile } from '../../utils/media';
+import NavLinks from './NavLinks';
+import Social from './Social';
+import NavSeparator from './NavSeparator';
+import NavButton from './NavButton';
 
 const Wrapper = styled.div`
   display: none;
@@ -48,8 +49,8 @@ const SecondaryMenu = styled.div`
 `;
 
 const LogoLink = styled(Link).attrs({
-  to: "/",
-  "aria-label": "home"
+  to: '/',
+  'aria-label': 'home'
 })`
   display: inline-block;
   vertical-align: center;
@@ -69,35 +70,30 @@ const IconWrapper = styled.div`
 `;
 
 const SecondaryMenuItem = styled.div`
-  // padding-right: 1.25rem;
+  padding-right: 1.25rem;
 `;
 
-const MobileNavbar = props => {
-  const { isMobileNavFolded, onMobileNavToggle } = props;
+const MobileNavbar = ({ isMobileNavFolded, onMobileNavToggle }) => (
+  <Wrapper>
+    <LogoLink>
+      <p>Logo</p>
+    </LogoLink>
 
-  return (
     <Wrapper>
-      <LogoLink>
-        <p>Logo</p>
-      </LogoLink>
-
-      <Wrapper>
-        <NavButton onClick={onMobileNavToggle} active={!isMobileNavFolded}>
-          <IconWrapper rotate={!isMobileNavFolded}>
-            {/* <FontAwesomeIcon icon={faChevronDown} /> */} ICON
-          </IconWrapper>
-        </NavButton>
-      </Wrapper>
-
-      <SecondaryMenu open={!isMobileNavFolded}>
-        <NavLinks />
-        <NavSeparator />
-        <SecondaryMenuItem>
-          <Social />
-        </SecondaryMenuItem>
-      </SecondaryMenu>
+      <NavButton onClick={onMobileNavToggle} active={!isMobileNavFolded}>
+        <IconWrapper rotate={!isMobileNavFolded}>
+          <FiMenu />
+        </IconWrapper>
+      </NavButton>
     </Wrapper>
-  );
-};
+    <SecondaryMenu open={!isMobileNavFolded}>
+      <NavLinks />
+      <NavSeparator />
+      <SecondaryMenuItem>
+        <Social />
+      </SecondaryMenuItem>
+    </SecondaryMenu>
+  </Wrapper>
+);
 
 export default MobileNavbar;

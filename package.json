@@ -8,6 +8,7 @@
     "@mdx-js/mdx": "^1.1.0",
     "@mdx-js/react": "^1.0.27",
     "babel-plugin-styled-components": "^1.10.6",
+    "eslint-config-airbnb": "^17.1.1",
     "gatsby": "^2.13.32",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-catch-links": "^2.1.2",
@@ -35,6 +36,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
     "react-live": "^2.1.2",
     "react-spring": "^8.0.27",
     "styled-components": "^4.3.2",
@@ -60,7 +62,6 @@
   "devDependencies": {
     "babel-eslint": "^10.0.2",
     "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",

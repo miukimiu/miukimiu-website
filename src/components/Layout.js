@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
-import tw from "tailwind.macro";
-import SEO from "./SEO";
-import theme from "../../config/theme";
-import useBuildTime from "../hooks/useBuildTime";
-import Nav from "./Nav";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
+import tw from 'tailwind.macro';
+import SEO from './SEO';
+import theme from '../../config/theme';
+import useBuildTime from '../hooks/useBuildTime';
+import NavBar from './navbar/NavBar';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -213,7 +213,7 @@ const Layout = ({ children, customSEO, noFooter }) => {
       <>
         {!customSEO && <SEO buildTime={buildTime} />}
         <GlobalStyle />
-        <Nav
+        <NavBar
           isMobileNavFolded={isMobileNavFolded}
           onMobileNavToggle={toggleMobileNav}
         />
@@ -224,7 +224,7 @@ const Layout = ({ children, customSEO, noFooter }) => {
             &copy; 2019 by Miukimiu. All rights reserved. <br />
             <a href="https://github.com/miukimiu/miukimiu-website/">
               GitHub Repository
-            </a>{" "}
+            </a>{' '}
             <br />
             <span>Last build: {buildTime}</span>
           </Footer>
