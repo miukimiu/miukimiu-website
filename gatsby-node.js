@@ -1,103 +1,95 @@
-const path = require('path');
+const _ = require('lodash')
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions;
+// graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
+const wrapper = promise =>
+  promise.then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+    return result
+  })
 
-  return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve('src/templates/post.jsx');
-    const tagPage = path.resolve('src/pages/tags.jsx');
-    const tagPosts = path.resolve('src/templates/tag.jsx');
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
 
-    resolve(
-      graphql(
-        `
-          query {
-            allMarkdownRemark(
-              sort: { order: ASC, fields: [frontmatter___date] }
-            ) {
-              edges {
-                node {
-                  frontmatter {
-                    path
-                    title
-                    tags
-                  }
-                }
-              }
+  let slug
+
+  if (node.internal.type === 'Mdx') {
+    if (
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
+    ) {
+      slug = `/${_.kebabCase(node.frontmatter.slug)}`
+    } else if (
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
+    ) {
+      slug = `/${_.kebabCase(node.frontmatter.title)}`
+    }
+    createNodeField({ node, name: 'slug', value: slug })
+  }
+}
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const postTemplate = require.resolve('./src/templates/post.js')
+  const categoryTemplate = require.resolve('./src/templates/category.js')
+
+  const result = await wrapper(
+    graphql(`
+      {
+        allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+          nodes {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              categories
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          return reject(result.errors);
         }
+      }
+    `)
+  )
 
-        const posts = result.data.allMarkdownRemark.edges;
+  const posts = result.data.allMdx.nodes
 
-        const postsByTag = {};
-        // create tags page
-        posts.forEach(({ node }) => {
-          if (node.frontmatter.tags) {
-            node.frontmatter.tags.forEach(tag => {
-              if (!postsByTag[tag]) {
-                postsByTag[tag] = [];
-              }
+  posts.forEach((n, index) => {
+    const next = index === 0 ? null : posts[index - 1]
+    const prev = index === posts.length - 1 ? null : posts[index + 1]
 
-              postsByTag[tag].push(node);
-            });
-          }
-        });
+    createPage({
+      path: n.fields.slug,
+      component: postTemplate,
+      context: {
+        slug: n.fields.slug,
+        prev,
+        next,
+      },
+    })
+  })
 
-        const tags = Object.keys(postsByTag);
+  const categorySet = new Set()
 
-        createPage({
-          path: '/tags',
-          component: tagPage,
-          context: {
-            tags: tags.sort(),
-          },
-        });
-
-        //create tags
-        tags.forEach(tagName => {
-          const posts = postsByTag[tagName];
-
-          createPage({
-            path: `/tags/${tagName}`,
-            component: tagPosts,
-            context: {
-              posts,
-              tagName,
-            },
-          });
-        });
-
-        //create posts
-        posts.forEach(({ node }, index) => {
-          const path = node.frontmatter.path;
-          const prev = index === 0 ? null : posts[index - 1].node;
-          const next =
-            index === posts.length - 1 ? null : posts[index + 1].node;
-          createPage({
-            path,
-            component: postTemplate,
-            context: {
-              pathSlug: path,
-              prev,
-              next,
-            },
-          });
-        });
+  _.each(posts, n => {
+    if (_.get(n, 'frontmatter.categories')) {
+      n.frontmatter.categories.forEach(cat => {
+        categorySet.add(cat)
       })
-    );
-  });
-};
+    }
+  })
 
-/* Allows named imports */
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-    },
-  });
-};
+  const categories = Array.from(categorySet)
+
+  categories.forEach(category => {
+    createPage({
+      path: `/categories/${_.kebabCase(category)}`,
+      component: categoryTemplate,
+      context: {
+        category,
+      },
+    })
+  })
+}

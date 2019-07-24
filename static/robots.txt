@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: */tags/
+Disallow:
 
-sitemap: https://gatsby-starter-tutorial.netlify.com/sitemap.xml
+sitemap: https://cara.lekoarts.de/sitemap.xml
