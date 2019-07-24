@@ -187,16 +187,20 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// const Footer = styled.footer`
-//   text-align: center;
-//   padding: 3rem 1rem;
-//   span {
-//     font-size: 0.75rem;
-//   }
-// `
+const Wrapper = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`;
 
 const Footer = styled.footer`
-  ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: #cecece;
+  color: #868686;
 `;
 
 const Layout = ({ children, customSEO, noFooter }) => {
@@ -210,7 +214,7 @@ const Layout = ({ children, customSEO, noFooter }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <>
+      <Wrapper>
         {!customSEO && <SEO buildTime={buildTime} />}
         <GlobalStyle />
         <NavBar
@@ -229,7 +233,7 @@ const Layout = ({ children, customSEO, noFooter }) => {
             <span>Last build: {buildTime}</span>
           </Footer>
         )}
-      </>
+      </Wrapper>
     </ThemeProvider>
   );
 };
