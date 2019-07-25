@@ -1,12 +1,13 @@
-import React, { PureComponent } from "react";
-import { StaticQuery, graphql, Link } from "gatsby";
-import styled, { css } from "styled-components";
-import rem from "../../utils/rem";
-import { navbarHeight } from "../../utils/sizes";
-import { mobile } from "../../utils/media";
-import NavLinks from "./NavLinks";
-import Social from "./Social";
-import MobileNavbar from "./MobileNavbar";
+import React, { PureComponent } from 'react';
+import { StaticQuery, graphql, Link } from 'gatsby';
+import styled, { css } from 'styled-components';
+import rem from '../../utils/rem';
+import { navbarHeight } from '../../utils/sizes';
+import { mobile } from '../../utils/media';
+import NavLinks from './NavLinks';
+import Social from './Social';
+import MobileNavbar from './MobileNavbar';
+import logo from '../../images/logo.svg';
 
 const Wrapper = styled.nav`
   position: fixed;
@@ -17,7 +18,7 @@ const Wrapper = styled.nav`
   height: ${rem(navbarHeight)};
   font-size: ${rem(15)};
   font-weight: 500;
-  background: tomato;
+  background: ${props => props.theme.colors.darkPrimary};
   transition: background 300ms ease-out;
   color: white;
 
@@ -50,8 +51,8 @@ const EndWrapper = styled.div`
 `;
 
 const LogoLink = styled(Link).attrs({
-  to: "/",
-  "aria-label": "home"
+  to: '/',
+  'aria-label': 'home'
 })`
   display: inline-block;
   vertical-align: center;
@@ -64,7 +65,7 @@ const NavBar = ({ onMobileNavToggle, isMobileNavFolded }) => (
     <NormalNavbar>
       <StartWrapper>
         <LogoLink>
-          <p>Logo</p>
+          <img src={logo} alt="logo" />
         </LogoLink>
         <NavLinks />
       </StartWrapper>

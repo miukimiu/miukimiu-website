@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Layout, Wrapper, Header, Subline, Article, SectionTitle } from '../components'
+import { Layout, Wrapper, Header, SubLine, Article, SectionTitle } from '../components'
 import config from '../../config'
 
 const Content = styled.div`
@@ -25,7 +25,7 @@ const Content = styled.div`
 
 const Category = ({ pageContext: { category }, data: { allMdx } }) => {
   const { nodes, totalCount } = allMdx
-  const subline = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${category}"`
+  const SubLine = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${category}"`
 
   return (
     <Layout>
@@ -36,9 +36,9 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
         </Header>
         <Content>
           <SectionTitle>Category &ndash; {category}</SectionTitle>
-          <Subline sectionTitle>
-            {subline} (See <Link to="/categories">all categories</Link>)
-          </Subline>
+          <SubLine sectionTitle>
+            {SubLine} (See <Link to="/categories">all categories</Link>)
+          </SubLine>
           {nodes.map(post => (
             <Article
               title={post.frontmatter.title}

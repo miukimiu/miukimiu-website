@@ -1,9 +1,9 @@
-import React from "react";
-import { Row, Col } from "react-flexbox-grid";
-import styled from "styled-components";
-import Emojify from "react-emojione";
-import Separator from "./common/Separator";
-import { Section, Inner, Article } from "./common/Elements.styled";
+import React from 'react';
+import { Row, Col } from 'react-flexbox-grid';
+import styled from 'styled-components';
+import Emojify from 'react-emojione';
+import Separator from './common/Separator';
+import { Section, Inner, Article } from './common/Elements.styled';
 
 const About = () => (
   <Section color="white">
@@ -39,9 +39,8 @@ const About = () => (
           giving some talks around the world!
         </p>
         <p>
-          I'm currently employed at UnitedHealth Group, working on UX Design and
-          Front-end development. In my free time, I'm probably working in one of
-          my projects!
+          I'm currently employed at Elastic, working as a Product Designer. In
+          my free time, I'm probably working in one of my projects!
         </p>
       </Article>
     </Inner>

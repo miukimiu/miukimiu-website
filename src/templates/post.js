@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import { Layout, Wrapper, Header, Subline, SEO, PrevNext } from '../components'
+import { Layout, Wrapper, Header, SubLine, SEO, PrevNext } from '../components'
 import config from '../../config'
 
 const Content = styled.article`
@@ -62,7 +62,7 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
         </Header>
         <Content>
           <Title>{post.title}</Title>
-          <Subline>
+          <SubLine>
             {post.date} &mdash; {postNode.timeToRead} Min Read &mdash; In{' '}
             {post.categories.map((cat, i) => (
               <React.Fragment key={cat}>
@@ -70,7 +70,7 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
                 <Link to={`/categories/${kebabCase(cat)}`}>{cat}</Link>
               </React.Fragment>
             ))}
-          </Subline>
+          </SubLine>
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>

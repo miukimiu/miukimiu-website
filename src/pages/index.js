@@ -1,25 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
-import { Parallax } from 'react-spring/renderprops-addons.cjs';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
+import styled from "styled-components";
+import tw from "tailwind.macro";
+import { Parallax } from "react-spring/renderprops-addons.cjs";
 
-import { Layout, Article } from '../components';
+import { Layout, Article } from "../components";
 
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from "../components/ProjectCard";
 
 // Elements
-import Inner from '../elements/Inner';
-import { Title, BigTitle, Subtitle } from '../elements/Titles';
+import Inner from "../elements/Inner";
+import { Title, BigTitle, Subtitle } from "../elements/Titles";
 
 // Views
-import Hero from '../home-sections/Hero';
-import Projects from '../home-sections/Projects';
-import About from '../home-sections/About';
-import Contact from '../home-sections/Contact';
-import Blog from '../home-sections/Blog';
-import avatar from '../images/avatar.jpg';
+import Hero from "../home-sections/Hero";
+import Projects from "../home-sections/Projects";
+import About from "../home-sections/About";
+import Contact from "../home-sections/Contact";
+import Blog from "../home-sections/Blog";
+import avatar from "../images/avatar.jpg";
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -64,52 +64,46 @@ const IndexPage = ({
     <Parallax pages={5}>
       <Hero offset={0}>
         <BigTitle>
-          Hello, <br /> I'm John Doe.
+          Hello, <br /> I'm Miuki Miu
         </BigTitle>
         <Subtitle>
-          I'm creating noice web experiences for the next generation of
-          consumer-facing companies.
+          My real name is Elizabet and I'm a product Designer who loves to code!
         </Subtitle>
       </Hero>
       <Projects offset={1}>
         <Title>Projects</Title>
         <ProjectsWrapper>
           <ProjectCard
-            title="Freiheit"
-            link="https://www.behance.net/gallery/58937147/Freiheit"
+            title="Cassette Tape"
+            link="https://miukimiu.github.io/cassette-tape"
             bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
           >
-            This project is my entry to Adobe's #ChallengeYourPerspective
-            contest.
+            A Chrome experiment that I presented at the Google I/0 Dublin in
+            2016. This project explores the web audio API.
           </ProjectCard>
           <ProjectCard
-            title="Harry Potter"
-            link="https://www.behance.net/gallery/52915793/Harry-Potter"
+            title="React Kawaii"
+            link="https://github.com/miukimiu/react-kawaii"
             bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
           >
-            I entered the DOCMA 2017 award with this Harry Potter inspired
-            image.
+            React Kawaii is a library of cute SVG illustrations (react
+            components). Ideal to give some cuteness and personality to your
+            react application.
           </ProjectCard>
           <ProjectCard
-            title="Tomb Raider"
-            link="https://www.behance.net/gallery/43907099/Tomb-Raider"
-            bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
-          >
-            Recreation of a Tomb Raider Wallpaper (Fan Art)
-          </ProjectCard>
-          <ProjectCard
-            title="Eagle"
-            link="https://www.behance.net/gallery/38068151/Eagle"
+            title="Soundtracktor"
+            link="https://www.soundtracktor.com/"
             bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
           >
-            A fantasy image manipulation relocating the habitat of wild animals.
+            Soundtracktor is a free AI-powered platform that connects composers
+            to the right opportunities and helps them monetize their music.
           </ProjectCard>
         </ProjectsWrapper>
       </Projects>
       <About offset={2}>
         <Title>About</Title>
         <AboutHero>
-          <Avatar src={avatar} alt="John Doe" />
+          <Avatar src={avatar} alt="Elizabet Oliveira" />
           <AboutSub>
             The English language can not fully capture the depth and complexity
             of my thoughts. So I'm incorporating Emoji into my speech to better
@@ -127,7 +121,7 @@ const IndexPage = ({
         </AboutDesc>
       </About>
       <Blog offset={3}>
-        ><Title>Latest articles</Title>
+        <Title>Latest articles</Title>
         {posts.map(post => (
           <Article
             title={post.frontmatter.title}
@@ -145,8 +139,8 @@ const IndexPage = ({
           <Title>Get in touch</Title>
           <ContactText>
             Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on
-            other platforms:{' '}
-            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
+            other platforms:{" "}
+            <a href="https://dribbble.com/LekoArts">Dribbble</a> &{" "}
             <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
           </ContactText>
         </Inner>
