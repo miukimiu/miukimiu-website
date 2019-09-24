@@ -39,8 +39,7 @@ const About = () => (
           giving some talks around the world!
         </p>
         <p>
-          I'm currently employed at UnitedHealth Group, working on UX Design and
-          Front-end development. In my free time, I'm probably working in one of
+          I'm currently employed at Elastic, working on Product Design. In my free time, I'm probably working in one of
           my projects!
         </p>
       </Article>
