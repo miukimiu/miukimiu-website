@@ -30,14 +30,6 @@ const Talks = () => (
               <Row>
                 <Col xs={12} sm={6}>
                   <CardEvent
-                    title="React Live"
-                    talk="To announce"
-                    date="September 13, 2019"
-                    location="Amsterdam, Netherlands"
-                  />
-                </Col>
-                <Col xs={12} sm={6}>
-                  <CardEvent
                     title="Intersection Conference"
                     talk="An SVG's tale"
                     date="October 1 & 2, 2019"
@@ -55,6 +47,14 @@ const Talks = () => (
               </Row>
               <Subtitle>Past</Subtitle>
               <Row>
+                <Col xs={12} sm={6}>
+                  <CardEvent
+                    title="React Live"
+                    talk="Animating an SVG Cat"
+                    date="September 13, 2019"
+                    location="Amsterdam, Netherlands"
+                  />
+                </Col>
                 <Col xs={12} sm={6}>
                   <CardEvent
                     title="JNation"
