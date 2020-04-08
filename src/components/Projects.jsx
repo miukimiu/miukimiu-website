@@ -64,27 +64,6 @@ const Projects = () => (
           </Article>
         </Col>
       </Row>
-      <Row className="item">
-        <Col xs={12} sm={4}>
-          <Thumb href="https://www.soundtracktor.com/" target="_blank">
-            <img src={img3} />
-          </Thumb>
-        </Col>
-        <Col xs={12} sm={8}>
-          <Article>
-            <h3>Soundtracktor</h3>
-            <p>
-              Soundtracktor is a free AI-powered platform that connects
-              composers to the right opportunities and helps them monetize their
-              music.
-            </p>
-            <ProjectLink
-              link="https://www.soundtracktor.com/"
-              text="soundtracktor.com"
-            />
-          </Article>
-        </Col>
-      </Row>
     </Inner>
   </Section>
 );
