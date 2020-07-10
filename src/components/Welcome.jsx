@@ -6,7 +6,7 @@ import SocialLinks from "./common/SocialLinks";
 
 const WelcomeSection = styled.section`
   display: flex;
-  background: ${props => props.theme.purple};
+  background: ${(props) => props.theme.purple};
   flex-direction: column;
   padding: 4rem 1rem 6rem;
   max-height: 560px;

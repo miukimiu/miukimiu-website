@@ -23,7 +23,7 @@ class App extends React.Component {
             scrollToComponent(this.Welcome, {
               offset: 0,
               align: "top",
-              duration: 1500
+              duration: 1500,
             })
           }
         >
@@ -34,7 +34,7 @@ class App extends React.Component {
                   scrollToComponent(this.About, {
                     offset: 0,
                     align: "top",
-                    duration: 1500
+                    duration: 1500,
                   })
                 }
               >
@@ -47,7 +47,7 @@ class App extends React.Component {
                   scrollToComponent(this.Projects, {
                     offset: 0,
                     align: "top",
-                    duration: 1500
+                    duration: 1500,
                   })
                 }
               >
@@ -60,7 +60,7 @@ class App extends React.Component {
                   scrollToComponent(this.Talks, {
                     offset: 0,
                     align: "top",
-                    duration: 1500
+                    duration: 1500,
                   })
                 }
               >
@@ -73,7 +73,7 @@ class App extends React.Component {
                   scrollToComponent(this.Awards, {
                     offset: 0,
                     align: "top",
-                    duration: 1500
+                    duration: 1500,
                   })
                 }
               >
@@ -86,7 +86,7 @@ class App extends React.Component {
                   scrollToComponent(this.Articles, {
                     offset: 0,
                     align: "top",
-                    duration: 1500
+                    duration: 1500,
                   })
                 }
               >
@@ -96,35 +96,35 @@ class App extends React.Component {
           </ul>
         </Header>
         <div
-          ref={section => {
+          ref={(section) => {
             this.Welcome = section;
           }}
         >
           <Welcome />
         </div>
         <div
-          ref={section => {
+          ref={(section) => {
             this.About = section;
           }}
         >
           <About />
         </div>
         <div
-          ref={section => {
+          ref={(section) => {
             this.Projects = section;
           }}
         >
           <Projects />
         </div>
         <div
-          ref={section => {
+          ref={(section) => {
             this.Talks = section;
           }}
         >
           <Talks />
         </div>
         <div
-          ref={section => {
+          ref={(section) => {
             this.Awards = section;
           }}
         >
@@ -132,7 +132,7 @@ class App extends React.Component {
         </div>
 
         <div
-          ref={section => {
+          ref={(section) => {
             this.Articles = section;
           }}
         >

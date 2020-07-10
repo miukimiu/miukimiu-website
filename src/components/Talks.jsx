@@ -26,8 +26,18 @@ const Talks = () => (
         <Col xs={12}>
           <Row>
             <Col xs={12} lg={8}>
-              <Subtitle>Upcoming</Subtitle>
+              {/* <Subtitle>Upcoming</Subtitle> */}
+              <Subtitle>Past</Subtitle>
               <Row>
+                <Col xs={12} sm={6}>
+                  <CardEvent
+                    title="React Day Berlin"
+                    talk="Exploring audio with React and SVGs"
+                    date="December 6, 2019"
+                    location="Berlin, Germany"
+                    youtube="https://youtu.be/DjhGQAeHHEY"
+                  />
+                </Col>
                 <Col xs={12} sm={6}>
                   <CardEvent
                     title="Intersection Conference"
@@ -36,16 +46,7 @@ const Talks = () => (
                     location="Milan, Italy"
                   />
                 </Col>
-                <Col xs={12} sm={6}>
-                  <CardEvent
-                    title="React Day Berlin"
-                    talk="To announce"
-                    date="December 6, 2019"
-                    location="Berlin, Germany"
-                  />
-                </Col>
               </Row>
-              <Subtitle>Past</Subtitle>
               <Row>
                 <Col xs={12} sm={6}>
                   <CardEvent

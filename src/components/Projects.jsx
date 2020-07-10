@@ -4,7 +4,7 @@ import ProjectLink from "./common/ProjectLink";
 import PageTitle from "./common/PageTitle";
 import img1 from "../assets/images/work/cassette-tape@2x.png";
 import img2 from "../assets/images/work/react-kawaii@2x.png";
-import img3 from "../assets/images/work/soundtracktor@2x.png";
+import img3 from "../assets/images/work/fork-this@2x.png";
 import Separator from "./common/Separator";
 import { Section, Thumb, Article, Inner } from "./common/Elements.styled";
 
@@ -60,6 +60,30 @@ const Projects = () => (
             <ProjectLink
               link="https://github.com/miukimiu/react-kawaii"
               text="github.com/miukimiu/react-kawaii"
+            />
+          </Article>
+        </Col>
+      </Row>
+      <Row className="row item">
+        <Col xs={12} sm={4}>
+          <Thumb
+            href="https://www.youtube.com/watch?v=bUmWcF0GSA4"
+            target="_blank"
+          >
+            <img src={img3} />
+          </Thumb>
+        </Col>
+        <Col xs={12} sm={8}>
+          <Article>
+            <h3>Fork This (Music Video) </h3>
+            <p>
+              “Fork This” aims to encourage women to follow their passion.
+              Overcoming imposter syndrome is a struggle, but if you just keep
+              going, you can achieve anything you want.
+            </p>
+            <ProjectLink
+              link="https://www.youtube.com/watch?v=bUmWcF0GSA4"
+              text="https://youtu.be/bUmWcF0GSA4"
             />
           </Article>
         </Col>

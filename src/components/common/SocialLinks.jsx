@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import dribbbleImg from "../../assets/images/social-icons/dribbble.svg";
-import githubImg from "../../assets/images/social-icons/github.svg";
-import linkedinImg from "../../assets/images/social-icons/linkedin.svg";
-import mediumImg from "../../assets/images/social-icons/medium.svg";
-import twitterImg from "../../assets/images/social-icons/twitter.svg";
+import {
+  Dribbble,
+  Github,
+  Linkedin,
+  Medium,
+  Twitter,
+  Instagram,
+} from "@icons-pack/react-simple-icons";
 
 const SocialLinksEl = styled.div`
   -ms-flex-pack: center;
@@ -22,19 +25,22 @@ const SocialLinksEl = styled.div`
 const SocialLinks = () => (
   <SocialLinksEl>
     <a href="https://github.com/miukimiu">
-      <img alt="" src={githubImg} />
+      <Github />
     </a>
     <a href="https://www.linkedin.com/in/elizabetoliveira/">
-      <img alt="" src={linkedinImg} />
+      <Linkedin />
     </a>
     <a href="https://medium.com/@miukimiu">
-      <img alt="" src={mediumImg} />
+      <Medium />
     </a>
     <a href="https://twitter.com/miuki_miu">
-      <img alt="" src={twitterImg} />
+      <Twitter />
     </a>
     <a href="https://dribbble.com/miukimiu">
-      <img alt="" src={dribbbleImg} />
+      <Dribbble />
+    </a>
+    <a href="https://instagram.com/miukimiu">
+      <Instagram />
     </a>
   </SocialLinksEl>
 );
