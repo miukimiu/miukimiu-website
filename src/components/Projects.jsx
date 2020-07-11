@@ -1,12 +1,12 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
+import {Row, Col} from "react-flexbox-grid";
 import ProjectLink from "./common/ProjectLink";
 import PageTitle from "./common/PageTitle";
-import img1 from "../assets/images/work/cassette-tape@2x.png";
-import img2 from "../assets/images/work/react-kawaii@2x.png";
-import img3 from "../assets/images/work/fork-this@2x.png";
+import cassetteTape from "../assets/images/work/cassette-tape@2x.png";
+import reactKawaii from "../assets/images/work/react-kawaii@2x.png";
+import forkThis from "../assets/images/work/fork-this@2x.png";
 import Separator from "./common/Separator";
-import { Section, Thumb, Article, Inner } from "./common/Elements.styled";
+import {Section, Thumb, Article, Inner} from "./common/Elements.styled";
 
 const Projects = () => (
   <Section color="#f4f5f9">
@@ -23,7 +23,7 @@ const Projects = () => (
             href="https://miukimiu.github.io/cassette-tape"
             target="_blank"
           >
-            <img src={img1} />
+            <img src={cassetteTape} alt="Cassette tape" />
           </Thumb>
         </Col>
         <Col xs={12} sm={8}>
@@ -46,7 +46,7 @@ const Projects = () => (
             href="https://github.com/miukimiu/react-kawaii"
             target="_blank"
           >
-            <img src={img2} />
+            <img src={reactKawaii} alt="React kawaii" />
           </Thumb>
         </Col>
         <Col xs={12} sm={8}>
@@ -70,7 +70,7 @@ const Projects = () => (
             href="https://www.youtube.com/watch?v=bUmWcF0GSA4"
             target="_blank"
           >
-            <img src={img3} />
+            <img src={forkThis} alt="Fork this" />
           </Thumb>
         </Col>
         <Col xs={12} sm={8}>

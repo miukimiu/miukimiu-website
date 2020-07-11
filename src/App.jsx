@@ -10,10 +10,6 @@ import Talks from "./components/Talks";
 import Header from "./components/common/Header";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>

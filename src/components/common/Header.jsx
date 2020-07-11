@@ -1,12 +1,11 @@
 import React from "react";
-import { withTheme } from "styled-components";
+import {withTheme} from "styled-components";
 import styled from "styled-components";
-import { HeaderEl } from "./Elements.styled";
-import { FiMenu } from "react-icons/fi";
+import {HeaderEl} from "./Elements.styled";
 
 const Inner = styled.div`
   padding: 0 30px;
-  max-width: ${props => props.theme.maxWidth};
+  max-width: ${(props) => props.theme.maxWidth};
   margin: 0 auto;
 
   img {
@@ -21,7 +20,7 @@ const Inner = styled.div`
 class HeaderComp extends React.Component {
   state = {
     active: "in-viewport",
-    sidebarOpen: false
+    sidebarOpen: false,
   };
 
   componentDidMount() {
@@ -43,19 +42,19 @@ class HeaderComp extends React.Component {
         (window.innerHeight || document.documentElement.clientHeight)
     ) {
       this.setState({
-        active: "in-viewport"
+        active: "in-viewport",
       });
     } else {
       this.setState({
-        active: "not-in-viewport"
+        active: "not-in-viewport",
       });
     }
   };
 
   render() {
-    const { active } = this.state;
+    const {active} = this.state;
 
-    const { theme, children, scrollToComponent } = this.props;
+    const {theme, children, scrollToComponent} = this.props;
 
     return (
       <HeaderEl active={active}>

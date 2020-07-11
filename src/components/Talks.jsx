@@ -1,10 +1,10 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
+import {Row, Col} from "react-flexbox-grid";
 import styled from "styled-components";
 import PageTitle from "./common/PageTitle";
 import CardEvent from "./common/CardEvent";
 import Separator from "./common/Separator";
-import { Section, Inner, Subtitle } from "./common/Elements.styled";
+import {Section, Inner, Subtitle} from "./common/Elements.styled";
 import photo from "../assets/images/photos/Elizabet_Oliveira.jpg";
 
 const Photo = styled.div`
@@ -118,7 +118,7 @@ const Talks = () => (
             </Col>
             <Col xs={12} lg={4}>
               <Photo>
-                <img src={photo} />
+                <img src={photo} alt="Miuki Miu at a conference" />
               </Photo>
             </Col>
           </Row>

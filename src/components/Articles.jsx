@@ -1,9 +1,9 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
+import {Row, Col} from "react-flexbox-grid";
 import ProjectLink from "./common/ProjectLink";
 import PageTitle from "./common/PageTitle";
 import Separator from "./common/Separator";
-import { Section, Thumb, Article, Inner } from "./common/Elements.styled";
+import {Section, Inner} from "./common/Elements.styled";
 
 const Articles = () => (
   <Section color="white">

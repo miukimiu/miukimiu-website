@@ -1,9 +1,7 @@
 import React from "react";
-import { Row, Col } from "react-flexbox-grid";
-import styled from "styled-components";
-import Emojify from "react-emojione";
+import Emoji from "a11y-react-emoji";
 import Separator from "./common/Separator";
-import { Section, Inner, Article } from "./common/Elements.styled";
+import {Section, Inner, Article} from "./common/Elements.styled";
 
 const About = () => (
   <Section color="white">
@@ -11,12 +9,13 @@ const About = () => (
     <Inner>
       <Article className="about">
         <h2>
-          Hello there!
-          <Emojify>👋</Emojify>
+          Hello there! <Emoji symbol="👋" label="wave" />
         </h2>
         <p>
-          My name is Miuki Miu (real name Elizabet <Emojify>🙃</Emojify>). I'm a
-          designer who codes or probably a developer who loves to design!
+          My name is Miuki Miu (real name Elizabet{" "}
+          <Emoji symbol="🙃" label="crazy" />
+          ). I'm a designer who codes or probably a developer who loves to
+          design!
         </p>
         <p>
           I started my career as a web developer and soon I realized that I like
@@ -39,8 +38,8 @@ const About = () => (
           giving some talks around the world!
         </p>
         <p>
-          I'm currently employed at Elastic, working on Product Design. In my free time, I'm probably working in one of
-          my projects!
+          I'm currently employed at Elastic, working on Product Design. In my
+          free time, I'm probably working in one of my projects!
         </p>
       </Article>
     </Inner>
