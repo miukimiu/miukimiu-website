@@ -19,14 +19,15 @@ ${styledNormalize}
     font-family: 'Source Sans Pro', sans-serif;
     background: #FFFFFF;
     font-size: ${remcalc(16)};
-    color: ${props => props.theme.darkGray}
+    color: ${(props) => props.theme.darkGray}
 
+
+  }  
     * {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       box-sizing: border-box;
     }
-  }
 
 
     /* Copy & Lists */
@@ -101,8 +102,8 @@ ${styledNormalize}
     flex-direction: column;
     padding: 0 $space;
 
-    @media screen and (min-width: ${props => props.theme.tablet}) {
-      padding: 0 ${props => props.theme.space * 2};
+    @media screen and (min-width: ${(props) => props.theme.tablet}) {
+      padding: 0 ${(props) => props.theme.space * 2};
     }
 
     &__separator {
@@ -124,7 +125,7 @@ ${styledNormalize}
 
 
     &--light {
-      color: ${props => props.theme.darkGray};
+      color: ${(props) => props.theme.darkGray};
     }
     &--dark {
       color: white;
